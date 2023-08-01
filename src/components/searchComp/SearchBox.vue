@@ -5,7 +5,7 @@ import SearchInput from "./SearchInput.vue";
 </script>
 <template>
   <div class="text-white flex justify-around items-center my-4 bg-[#1a191f]">
-    <search-input />
+    <search-input  />
     <close-icon />
   </div>
 </template>

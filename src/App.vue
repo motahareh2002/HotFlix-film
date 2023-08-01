@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import MobileMenu from "./components/menus/MobileMenu.vue";
+import HomeView from './views/HomeView.vue';
+
 </script>
 
 <template>
   <div>
-    <MobileMenu />
+    <HomeView />
   </div>
 </template>
 
