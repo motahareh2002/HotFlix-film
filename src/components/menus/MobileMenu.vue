@@ -7,13 +7,13 @@
 </script>
 
 <template>
-  <div class="text-[#FFFFFF] flex justify-between items-center m-3">
+  <div class="text-[#FFFFFF] flex justify-between items-center m-3 ">
     <div class="w-1/2">
-      <HotFlix />
+      <HotFlix class="w-24" />
     </div>
-    <div class="flex justify-between items-center w-1/2 text-xl">
+    <div class="flex justify-between items-center w-1/2">
       <SearchIcon />
-      <div class="flex items-center">
+      <div class="flex items-center  hover:hover">
         <span class="mr-1">En</span>
         <caret-down-icon />
       </div>

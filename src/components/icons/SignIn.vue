@@ -1,3 +1,5 @@
 <template>
-    <fa icon="sign-in"/>
+    <button class="btn-orange">
+        <fa icon="sign-in"/>
+    </button>
 </template>

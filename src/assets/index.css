@@ -1,7 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer components {
+    .btn-orange {
+      @apply border border-[#f9ab00] py-1 px-2 rounded-lg;
+    }
+    .hover{
+        @apply text-[#f9ab00]
+    }
+  }
 body{
     background-color: #1a191f;
 }

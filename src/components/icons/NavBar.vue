@@ -1,3 +1,5 @@
 <template>
-    <fa icon="bars"/>
+    <button class="  hover:hover">
+        <fa icon="bars"/>
+    </button>
 </template>
