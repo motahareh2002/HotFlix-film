@@ -14,7 +14,7 @@ function showMenu(){
 
 
 <template>
-  <div class="text-[#FFFFFF]">
+  <div class="text-[#FFFFFF]" >
     <div class="flex justify-between items-center">
       <div class="w-2/12">
         <HotFlix />
@@ -46,7 +46,7 @@ function showMenu(){
         </div>
       </div>
     </div>
-    <MoreMenu v-if="show" />
+    <MoreMenu v-if="show" class="w-[13%] absolute left-1/2  h-[250px] " />
   </div>
 </template>
     

@@ -6,9 +6,14 @@ import SignIn from "../icons/SignIn.vue";
 import NavBar from "../icons/NavBar.vue";
 import SearchBox from "../searchComp/SearchBox.vue";
 import { ref } from "vue";
+import NavBarMenu from "./NavBarMenu.vue";
 let isOpen = ref(false);
+let showMenu = ref(false);
 function goTo() {
   isOpen.value = true;
+}
+function showNavMenu() {
+  showMenu.value = true;
 }
 </script>
 
@@ -24,7 +29,7 @@ function goTo() {
       <SearchIcon @click="goTo" />
       <div class="flex items-center hover:hover">
         <span class="mr-1">En</span>
-        <caret-down-icon />
+        <caret-down-icon @click="showNavMenu" />
       </div>
       <div>
         <Sign-In />
@@ -35,4 +40,5 @@ function goTo() {
   <div v-else>
     <SearchBox />
   </div>
+  <!-- <NavBarMenu /> -->
 </template>

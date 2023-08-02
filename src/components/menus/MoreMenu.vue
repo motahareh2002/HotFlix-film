@@ -3,8 +3,8 @@
 <template>
   <ul
     class="flex flex-col items-start px-5 bg-[#222028] 
-    text-[#FFFFFF] w-[13%] rounded-lg absolute left-1/2 text-sm
-    overflow-y-auto h-[34%] mt-4"
+    text-[#FFFFFF] rounded-lg
+    overflow-y-auto mt-4"
   >
     <button class="py-2 hover:hover">
       <li>About</li>
@@ -37,11 +37,5 @@
       <li>404 Page</li>
     </button>
   </ul>
+  
 </template>
-
-
-
-
-
-
-404 Page
