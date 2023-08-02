@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +7,31 @@
       @apply border-2 border-[#f9ab00]  rounded-md;
     }
     .hover{
-        @apply text-[#f9ab00]
+        @apply text-[#f9ab00] transition-colors duration-300
     }
   }
 body{
     background-color: #1a191f;
+    font-family: 'Roboto';
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #27262c;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f9ab00;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1a191f;
+  border-radius: 5px;
 }

@@ -2,7 +2,7 @@
     import ButtonOrange from '../btns/buttonOrange.vue'
 </script>
 <template>
-    <ButtonOrange class="md:hidden px-2 py-1">
+    <ButtonOrange class="md:hidden lg:hidden px-2 py-1">
         <fa icon="sign-in"/>
     </ButtonOrange>
     <ButtonOrange class="hidden md:block px-8 py-1">
