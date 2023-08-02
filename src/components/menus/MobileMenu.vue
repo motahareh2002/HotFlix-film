@@ -15,18 +15,21 @@ function goTo() {
 <template>
   <div
     v-if="!isOpen"
-    class="text-[#FFFFFF] flex justify-between items-center m-3"
+    class="text-[#FFFFFF] flex justify-between items-center my-5 mx-4 sm:mx-24"
   >
     <div class="w-1/2">
       <HotFlix class="w-24" />
     </div>
-    <div class="flex justify-between items-center w-1/2">
+    <div class="flex justify-between items-center w-1/2 sm:w-2/5">
       <SearchIcon @click="goTo" />
       <div class="flex items-center hover:hover">
         <span class="mr-1">En</span>
         <caret-down-icon />
       </div>
-      <Sign-In />
+      <div>
+        <Sign-In />
+      </div>
+      
       <Nav-Bar />
     </div>
   </div>

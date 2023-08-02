@@ -1,5 +1,11 @@
+<script setup lang="ts">
+    import ButtonOrange from '../btns/buttonOrange.vue'
+</script>
 <template>
-    <button class="btn-orange">
+    <ButtonOrange class="md:hidden px-2 py-1">
         <fa icon="sign-in"/>
-    </button>
+    </ButtonOrange>
+    <ButtonOrange class="hidden md:block px-8 py-1">
+        <span class="text-sm">SIGN IN</span>
+    </ButtonOrange>
 </template>
