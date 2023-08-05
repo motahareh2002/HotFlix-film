@@ -14,7 +14,7 @@ function showMenu(){
 
 
 <template>
-  <div class="text-[#FFFFFF]" >
+  <header  class="hidden lg:block px-24 py-4 border-b border-[#222028] text-[#FFFFFF]" >
     <div class="flex justify-between items-center">
       <div class="w-2/12">
         <HotFlix />
@@ -47,6 +47,6 @@ function showMenu(){
       </div>
     </div>
     <MoreMenu v-if="show" class="w-[13%] absolute left-1/2  h-[250px] " />
-  </div>
+  </header>
 </template>
     

@@ -1,6 +1,6 @@
 
 <template>
-  <button class="hover:hover">
-    <fa icon="close" />
-  </button>
+  <!-- <button class=""> -->
+    <fa icon="close" class="hover:hover " />
+  <!-- </button> -->
 </template>

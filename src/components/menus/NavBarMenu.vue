@@ -11,7 +11,7 @@ function showMoreMenu(){
 
 <template>
   <div class="text-[#FFFFFF] bg-[#1a191f] w-[300px] absolute right-0 border-t border-[#f9ab00]">
-    <ul class="flex flex-col justify-between items-start w-2/5 pl-5 text-sm">
+    <ul class="flex flex-col justify-between items-start w-2/5 pl-5 text-xs mt-5">
       <button class="hover:hover py-2">
         <li>HOME</li>
       </button>
@@ -25,7 +25,7 @@ function showMoreMenu(){
         <li class="font-bold text-xl">...</li>
       </button>
     </ul>
-    <MoreMenu v-if="showMenu" class="text-xs w-[60%] h-[170px]" />
+    <MoreMenu v-if="showMenu" class="text-xs w-[60%] h-[170px] ml-5" />
   </div>
 </template>
 
