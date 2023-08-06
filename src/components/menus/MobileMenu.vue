@@ -41,7 +41,9 @@ function hiddenNavMenu() {
             <caret-down-icon />
           </div>
           <div>
-            <Sign-In />
+            <router-link :to="{ path: '/signIn' }">
+              <Sign-In />
+            </router-link>
           </div>
           <div>
             <Nav-Bar @click="showNavMenu" v-if="menuNav" />
