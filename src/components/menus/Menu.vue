@@ -3,18 +3,20 @@ import HotFlix from "../icons/HotFlix.vue";
 import CaretDownIcon from "../icons/caretDownIcon.vue";
 import SignIn from "../icons/SignIn.vue";
 import SearchInput from "../searchComp/SearchInput.vue";
-import MoreMenu from './MoreMenu.vue';
+import MoreMenu from "./MoreMenu.vue";
 import { ref } from "vue";
-let show = ref(false)
-function showMenu(){
-    show.value = !show.value
+let show = ref(false);
+function showMenu() {
+  show.value = !show.value;
 }
 </script>
 
 
 
 <template>
-  <header  class="hidden lg:block px-24 py-4 border-b border-[#222028] text-[#FFFFFF]" >
+  <header
+    class="hidden lg:block px-24 py-4 border-b border-[#222028] text-[#FFFFFF]"
+  >
     <div class="flex justify-between items-center">
       <div class="w-2/12">
         <HotFlix />
@@ -41,12 +43,15 @@ function showMenu(){
             <caret-down-icon />
           </div>
           <div>
-            <Sign-In />
+            <router-link :to="{ path: '/signIn' }">
+              <Sign-In />
+            </router-link>
           </div>
         </div>
       </div>
     </div>
-    <MoreMenu v-if="show" class="w-[13%] absolute left-1/2  h-[250px] " />
+    <MoreMenu v-if="show" class="w-[13%] absolute left-1/2 h-[250px]" />
   </header>
+
 </template>
     
