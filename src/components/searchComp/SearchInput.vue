@@ -11,7 +11,7 @@ import SearchIcon from "../icons/SearchIcon.vue";
     <input
       type="text"
       placeholder="Search..."
-      class="focus:outline-none rounded-md p-2 bg-[#222028] lg:w-full"
+      class="focus:outline-none rounded-md p-2 bg-[#222028] lg:w-full border border-transparent focus:border-0 focus:ring-0"
     />
     <SearchIcon class="" />
   </form>
