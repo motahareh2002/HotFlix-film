@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <div>
+    <component :is="$route.meta.layout">
     <router-view />
-  </div>
+    </component>
 </template>
 
