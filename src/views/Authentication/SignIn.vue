@@ -7,9 +7,10 @@ import BrandIcon from '../../components/icons/BrandIcon.vue';
 
 <template >
   <div
-    class="bg-[#1a191f] rounded-md border border-[#222028] w-10/12 sm:w-[400px] mx-auto my-12 sm:mt-24 py-10 px-4 text-[#FFFFFF] sm:px-16"
+    class="bg-[#1a191f] shadow-xl rounded-md border border-[#222028] w-10/12 sm:w-[400px] mx-auto  py-10 px-4 text-[#FFFFFF] sm:px-16"
   >
-    <div class="flex justify-center mb-10">
+    <div>
+        <div class="flex justify-center mb-10">
       <svg
         width="126"
         height="23"
@@ -47,7 +48,7 @@ import BrandIcon from '../../components/icons/BrandIcon.vue';
     <div class="my-3">
         <BrandIcon/>
     </div>
-    <div class="text-sm text-center mt-7">
+    <div class="text-xs text-center mt-7">
         <span>Don't have an account? </span>
         <router-link to="/signUp">
             <span class="text-[#f9ab00]">Sign Up!</span>
@@ -58,12 +59,7 @@ import BrandIcon from '../../components/icons/BrandIcon.vue';
             <span class="text-[#f9ab00]">Forgot Password?</span>
         </router-link>
     </div>
+    </div>
   </div>
 </template>
 
-
-<style >
-body {
-  background: url("../../assets/img/section.jpg");
-}
-</style>
