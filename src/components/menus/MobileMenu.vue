@@ -50,7 +50,7 @@ function hiddenNavMenu() {
             <CloseIcon
               @click="hiddenNavMenu"
               v-if="!menuNav"
-              class="h-7 mt-1 text-[#f9ab00]"
+              class="h-7 mt-1 text-primary"
             />
           </div>
         </div>

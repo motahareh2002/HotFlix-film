@@ -4,7 +4,7 @@ import Menu from "../components/menus/Menu.vue";
 import NewItemSwipper from "../components/swipper/NewItemSwipper.vue";
 </script>
 <template>
-  <div class="selection:bg-[#f9ab00] selection:text-[#FFFFFF]">
+  <div class="selection:bg-primary selection:text-[#FFFFFF]">
     <div>
       <router-link :to="{ path: '/' }">
         <MobileMenu />

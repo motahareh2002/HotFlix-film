@@ -46,11 +46,11 @@ import BrandIcon from "../../components/icons/BrandIcon.vue";
             class="form-input my-3 p-3 w-full sm:p-2.5"
           />
           <div class="flex items-center my-3">
-            <input type="checkbox" class="p-2 text-[#f9ab00] checkbox-input" />
+            <input type="checkbox" class="p-2 text-primary checkbox-input" />
             <label class="ml-4 text-xs"
               >I agree to the
               <router-link to="/privacy">
-                <span class="text-[#f9ab00]">Privacy Policy</span>
+                <span class="text-primary">Privacy Policy</span>
               </router-link>
             </label>
           </div>
@@ -68,7 +68,7 @@ import BrandIcon from "../../components/icons/BrandIcon.vue";
       <div class="text-xs text-center mt-7">
         <span>Already have an account? </span>
         <router-link to="/signIn">
-          <span class="text-[#f9ab00]">Sign In!</span>
+          <span class="text-primary">Sign In!</span>
         </router-link>
       </div>
     </div>

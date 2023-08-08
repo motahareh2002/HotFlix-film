@@ -10,7 +10,7 @@ function showMoreMenu(){
 
 
 <template>
-  <div class="text-[#FFFFFF] bg-[#1a191f] w-[300px] absolute right-0 border-t border-[#f9ab00]">
+  <div class="text-[#FFFFFF] bg-[#1a191f] w-[300px] absolute right-0 border-t border-primary">
     <ul class="flex flex-col justify-between items-start w-2/5 pl-5 text-xs mt-5">
       <button class="hover:hover py-2">
         <li>HOME</li>

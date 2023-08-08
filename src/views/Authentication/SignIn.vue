@@ -35,7 +35,7 @@ import BrandIcon from '../../components/icons/BrandIcon.vue';
         <div class="flex items-center my-3">
           <input
             type="checkbox" 
-            class="p-2 text-[#f9ab00] checkbox-input"
+            class="p-2 text-primary checkbox-input"
           />
           <label class="ml-4 text-sm ">Remember Me</label>
         </div>
@@ -51,12 +51,12 @@ import BrandIcon from '../../components/icons/BrandIcon.vue';
     <div class="text-xs text-center mt-7">
         <span>Don't have an account? </span>
         <router-link to="/signUp">
-            <span class="text-[#f9ab00]">Sign Up!</span>
+            <span class="text-primary">Sign Up!</span>
         </router-link>
     </div>
     <div class="text-xs text-center mt-4">
         <router-link to="/forgotPass">
-            <span class="text-[#f9ab00]">Forgot Password?</span>
+            <span class="text-primary">Forgot Password?</span>
         </router-link>
     </div>
     </div>
