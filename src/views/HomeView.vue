@@ -2,6 +2,7 @@
 import MobileMenu from "../components/menus/MobileMenu.vue";
 import Menu from "../components/menus/Menu.vue";
 import NewItemSwipper from "../components/swipper/NewItemSwipper.vue";
+import CardImg from '@/components/cardImage/CardImg.vue';
 </script>
 <template>
   <div class="selection:bg-primary selection:text-[#FFFFFF]">
