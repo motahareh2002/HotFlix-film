@@ -5,7 +5,6 @@ import CardImg from "../cardImage/CardImg.vue";
 import { ref } from "vue";
 import type { Ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 
 import "swiper/css/pagination";
@@ -83,7 +82,7 @@ function prevITem() {
 
 <template>
   <div
-    class="text-white bg-blend-darken px-6 sm:px-20 pt-14 pb-5"
+    class="text-white bg-blend-darken px-2 sm:px-20 pt-14 pb-8"
     :style="{ background: `rgba(0,0,0,0.7) url(${backgroundImg})` }"
   >
     <div class="flex justify-between mb-10 pl-4 pr-6">
@@ -96,9 +95,6 @@ function prevITem() {
         <ArrowRight @click="nextItem" />
       </div>
     </div>
-    <!-- <div class="flex pr-5">
-      
-    </div> -->
     <div>
       <Swiper
         :rewind="true"
@@ -108,7 +104,7 @@ function prevITem() {
         :breakpoints="{
           '100':{
             slidesPerView: 2,
-            spaceBetween: 5,
+            spaceBetween: 1,
           },
           '640': {
             slidesPerView: 3,
