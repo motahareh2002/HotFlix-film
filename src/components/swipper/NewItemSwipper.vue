@@ -4,6 +4,12 @@ import ArrowRight from "../icons/ArrowRight.vue";
 import CardImg from "../cardImage/CardImg.vue";
 import { ref } from "vue";
 import type { Ref } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 interface backImage {
   id: number;
   src: string;
@@ -27,35 +33,35 @@ const sliderImages: slider[] = [
     src: "http://hotflix.volkovdesign.com/main/img/covers/cover.jpg",
     detail: "I Dream in Another...",
     category: "Action, Triler",
-    rate : 8.4
+    rate: 8.4,
   },
   {
     id: 2,
     src: "http://hotflix.volkovdesign.com/main/img/covers/cover2.jpg",
     detail: "Benched",
     category: "Comedy",
-    rate : 7.1
+    rate: 7.1,
   },
   {
     id: 3,
     src: "http://hotflix.volkovdesign.com/main/img/covers/cover3.jpg",
     detail: "Whitney",
     category: "Romance, Drama",
-    rate : 2.3
+    rate: 2.3,
   },
   {
     id: 4,
     src: "http://hotflix.volkovdesign.com/main/img/covers/cover4.jpg",
     detail: "Blindspotting",
     category: "Comedy, Drama",
-    rate : 6.8
+    rate: 6.8,
   },
   {
     id: 5,
     src: "http://hotflix.volkovdesign.com/main/img/covers/cover5.jpg",
     detail: "Blindspotting",
     category: "Comedy, Drama",
-    rate : 3.9
+    rate: 3.9,
   },
 ];
 const index: Ref<number> = ref(0);
@@ -90,20 +96,54 @@ function prevITem() {
         <ArrowRight @click="nextItem" />
       </div>
     </div>
-    <div
-      class="flex pr-5"
-    >
-      <CardImg
-        v-for="sliderImage in sliderImages"
-        :key="sliderImage.id"
-        :img="sliderImage.src"
-        :rate="sliderImage.rate"
-        :details="sliderImage.detail"
-        :category="sliderImage.category"
-        :borderColor= "sliderImage.rate > 7 ? 'green' : (sliderImage.rate > 4 ? 'yellow' : 'red')"
-      />
+    <!-- <div class="flex pr-5">
+      
+    </div> -->
+    <div>
+      <Swiper
+        :rewind="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :breakpoints="{
+          '100':{
+            slidesPerView: 2,
+            spaceBetween: 5,
+          },
+          '640': {
+            slidesPerView: 3,
+            spaceBetween: 5,
+          },
+          '768': {
+            slidesPerView: 4,
+            spaceBetween: 5,
+          }
+        }"
+        class="mySwiper"
+      >
+        <SwiperSlide
+          v-for="sliderImage in sliderImages"
+          :key="sliderImage.id"
+          class=""
+        >
+          <CardImg
+            :img="sliderImage.src"
+            :rate="sliderImage.rate"
+            :details="sliderImage.detail"
+            :category="sliderImage.category"
+            :borderColor="
+              sliderImage.rate > 7
+                ? 'green'
+                : sliderImage.rate > 4
+                ? 'yellow'
+                : 'red'
+            "
+          />
+        </SwiperSlide>
+      </Swiper>
     </div>
   </div>
 </template>
+
 
 

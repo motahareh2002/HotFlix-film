@@ -1,5 +1,7 @@
 
 <script setup lang="ts">
+import ButtonPlay from '../btns/ButtonPlay.vue';
+
 const props = defineProps<{
   details?: string;
   category?: string;
@@ -19,11 +21,7 @@ const props = defineProps<{
           :src="`${img}`"
           class="rounded-lg brightness-75 group-hover:brightness-50 transition-all duration-300"
         />
-        <button
-          class="bg-[#FFFFFF] rounded-full h-14 w-14 border-[6px] absolute top-[40%] invisible group-hover:visible transition-all duration-700 left-1/3"
-        >
-          <fa icon="play" class="text-primary text-xl mt-1 ml-1" />
-        </button>
+        <ButtonPlay class=" group-hover:visible"/>
       </div>
       <div
         id="rate"
