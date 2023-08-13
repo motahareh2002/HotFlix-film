@@ -25,11 +25,12 @@ function hiddenNavMenu() {
 </script>
 
 <template>
-  <header class="block lg:hidden border-b border-[#222028]" >
-    <div>
+  <header class="block lg:hidden border-b border-[#222028]  z-50" >
+    <div class="">
       <div
         v-if="!isOpen"
         class="text-[#FFFFFF] flex justify-between items-center py-5 px-4 sm:px-24"
+
       >
         <div class="w-1/2">
           <HotFlix class="w-24 sm:w-28" />
