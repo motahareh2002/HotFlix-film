@@ -3,6 +3,7 @@ import MobileMenu from "../components/menus/MobileMenu.vue";
 import Menu from "../components/menus/Menu.vue";
 import NewItemSwipper from "../components/swipper/NewItemSwipper.vue";
 import NewItems from "../components/newItems/NewItems.vue";
+import ExpectedPremiere from '@/components/expectedPremiere/ExpectedPremiere.vue';
 </script>
 <template>
   <div class="selection:bg-primary selection:text-[#FFFFFF]">
@@ -17,6 +18,9 @@ import NewItems from "../components/newItems/NewItems.vue";
     </div>
     <div>
       <new-items />
+    </div>
+    <div>
+        <ExpectedPremiere />
     </div>
   </div>
 </template>

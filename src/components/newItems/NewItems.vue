@@ -83,10 +83,7 @@ function subMenuOpen() {
           </li>
         </ul>
       </div>
-      <new-releases
-        class="-z-50 absolute"
-        :class="{ '-mt-28 md:mt-5': isOpen }"
-      />
+      <new-releases/>
     </div>
   </div>
 </template>
