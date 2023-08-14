@@ -147,7 +147,7 @@ const newRelease: release[] = [
 
 
 <template>
-  <div class="px-4 sm:px-20 pt-14 pb-10">
+  <div class="px-4 sm:px-20 pt-14 pb-10 border-b border-[#222028]">
     <div class="text-[#FFFFFF] md:flex justify-between">
       <h1 class="text-2xl">Expected premiere</h1>
       <div class="flex justify-between mt-5 mb-8">
