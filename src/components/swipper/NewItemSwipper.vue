@@ -5,6 +5,7 @@ import CardImg from "../cardImage/CardImg.vue";
 import { ref } from "vue";
 import type { Ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import {Navigation } from 'swiper/modules';
 import "swiper/css";
 
 import "swiper/css/pagination";
@@ -91,13 +92,14 @@ function prevITem() {
         <span class="">OF THIS SEASON</span>
       </div>
       <div class="flex justify-between text-xl opacity-90">
-        <ArrowLeft class="mr-5" @click="prevITem" />
-        <ArrowRight @click="nextItem" />
+        <ArrowLeft class="mr-5 prev" @click="prevITem" />
+        <ArrowRight class="next" @click="nextItem" />
       </div>
     </div>
     <div>
       <Swiper
         :rewind="true"
+        :modules="[Navigation]"
         :pagination="{
           clickable: true,
         }"
@@ -113,7 +115,12 @@ function prevITem() {
           '768': {
             slidesPerView: 4,
             spaceBetween: 5,
-          }
+          },
+          
+        }"
+        :navigation="{
+          nextEl : '.next',
+          prevEl : '.prev'
         }"
         class="mySwiper"
       >

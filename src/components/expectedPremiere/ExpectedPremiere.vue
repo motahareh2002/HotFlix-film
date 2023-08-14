@@ -3,7 +3,11 @@ import CardImg from "../cardImage/CardImg.vue";
 import AngleLeft from "../icons/AngleLeft.vue";
 import AngleRight from "../icons/AngleRight .vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { useSwiper } from "swiper/vue";
+import {Navigation } from 'swiper/modules';
+import 'swiper/css';
+
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 interface release {
   id: number;
   src: string;
@@ -139,13 +143,12 @@ const newRelease: release[] = [
     rate: 3.9,
   },
 ];
-const swiper = useSwiper();
 </script>
 
 
 <template>
   <div class="px-4 sm:px-20 pt-14 pb-10">
-    <div class="text-[#FFFFFF]">
+    <div class="text-[#FFFFFF] md:flex justify-between">
       <h1 class="text-2xl">Expected premiere</h1>
       <div class="flex justify-between mt-5 mb-8">
         <button class="bg-[#222028] px-2 py-1 rounded-md text-sm hover:hover">
@@ -153,14 +156,19 @@ const swiper = useSwiper();
         </button>
         <div>
           <AngleLeft
-            class="bg-[#222028] px-2.5 py-1 rounded-md mr-5 hover:hover"
+            class="bg-[#222028] px-2.5 py-1 rounded-md ml-8 mr-5 hover:hover prev"
           />
-          <AngleRight class="bg-[#222028] px-2.5 py-1 rounded-md hover:hover" />
+          <AngleRight class="bg-[#222028] px-2.5 py-1 rounded-md hover:hover next" />
         </div>
       </div>
     </div>
     <Swiper
       :rewind="true"
+      :modules="[Navigation]"
+      :navigation="{
+        nextEl : '.next',
+        prevEl : '.prev'
+      }"
       :pagination="{
         clickable: true,
       }"
@@ -177,6 +185,10 @@ const swiper = useSwiper();
           slidesPerView: 4,
           spaceBetween: 5,
         },
+        '1200':{
+            slidesPerView: 6,
+            spaceBetween: 5,
+          }
       }"
       class="mySwiper"
     >
@@ -194,3 +206,4 @@ const swiper = useSwiper();
     </Swiper>
   </div>
 </template>
+
