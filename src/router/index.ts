@@ -5,6 +5,10 @@ import ForgotPass from '@/views/Authentication/ForgotPass.vue'
 import HomeLayout from '@/layout/HomeLayout.vue'
 import SignInLayout from '@/layout/SignInLayout.vue'
 import SignUp from '@/views/Authentication/SignUp.vue'
+import NewReleases from '@/components/newItems/NewReleases.vue'
+import TvSeries from '@/components/newItems/TvSeries.vue'
+import MoviesItem from '@/components/newItems/MoviesItem.vue'
+import CartonsITem from '@/components/newItems/CartonsITem.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -39,8 +43,32 @@ const router = createRouter({
       meta:{
           layout :SignInLayout
       }
+    },
+    {
+      path : '/RELEASES',
+      name : 'release',
+      component : NewReleases,
+      meta:{
+          layout : HomeLayout
+      }
+    },
+    {
+      path : '/MOVIES',
+      name : 'MOVIES',
+      component : MoviesItem,
+    },
+    {
+      path : '/SERIES',
+      name : 'SERIES',
+      component : TvSeries,
+    },
+    {
+      path : '/CARTOONS',
+      name : 'CARTOONS',
+      component : CartonsITem,
     }
   ]
 })
 
 export default router
+
