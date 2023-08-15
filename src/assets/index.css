@@ -5,9 +5,11 @@
 
 @layer components {
   .btn-orange {
-    @apply border-2 border-[#f9ab00] rounded-md;
+    @apply border-2 border-[#f9ab00] rounded-md hover:bg-[rgba(249,171,0,0.05)];
   }
-
+  .btn-green{
+    @apply border-2 border-[#29b474] rounded-md hover:bg-[rgba(41,180,116,0.05)]
+  }
   .hover {
     @apply text-[#f9ab00] transition-colors duration-300
   }
