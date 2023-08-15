@@ -9,7 +9,7 @@
       <span class="font-bold">HotFlix</span>
       <span> – Best Place for Movies</span>
     </div>
-    <div class="text-sm w-4/5">
+    <div class="text-sm md:w-4/5">
       <p class="pb-5 mt-8">
         It is a long established fact that a reader will be distracted by the
         readable content of a page when looking at its layout. The point of
