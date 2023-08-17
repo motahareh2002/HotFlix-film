@@ -151,9 +151,11 @@ const newRelease: release[] = [
     <div class="text-[#FFFFFF] md:flex justify-between">
       <h1 class="text-2xl">Expected premiere</h1>
       <div class="flex justify-between mt-5 mb-8">
-        <button class="bg-[#222028] px-2 py-1 rounded-md text-sm hover:hover">
-          View All
-        </button>
+        <router-link :to="{path: '/catalog'}">
+          <button class="bg-[#222028] px-2 py-1 rounded-md text-sm hover:hover">
+            View All
+          </button>
+        </router-link>
         <div>
           <AngleLeft
             class="bg-[#222028] px-2.5 py-1 rounded-md ml-8 mr-5 hover:hover prev"

@@ -29,19 +29,27 @@ function x(){
   >
     <div class="flex justify-between items-center">
       <div class="w-2/12">
-        <HotFlix />
+        <router-link :to="{path :'/'}">
+          <HotFlix />
+        </router-link>
       </div>
       <div class="flex justify-between w-9/12">
         <ul class="flex justify-between items-center w-2/5 text-xs">
-          <button class="hover:hover">
-            <li>HOME</li>
-          </button>
-          <button class="hover:hover">
-            <li>CATALOG</li>
-          </button>
-          <button class="hover:hover">
-            <li>PRICING PLAN</li>
-          </button>
+          <router-link :to="{ path: '/' }">
+            <button class="hover:hover">
+              <li>HOME</li>
+            </button>
+          </router-link>
+          <router-link :to="{ path: '/catalog' }">
+            <button class="hover:hover">
+              <li>CATALOG</li>
+            </button>
+          </router-link>
+          <router-link :to="{path : '/pricingPlan'}">
+            <button class="hover:hover">
+              <li>PRICING PLAN</li>
+            </button>
+          </router-link>
           <button class="-mt-2 hover:hover" @click="showMenu">
             <li class="font-bold text-xl">...</li>
           </button>

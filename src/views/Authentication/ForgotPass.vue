@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import buttonOrange from "../../components/btns/buttonOrange.vue";
-import BrandIcon from "../../components/icons/BrandIcon.vue";
 </script>
 
 

@@ -13,7 +13,9 @@ function scrollToTop() {
 <template>
   <footer class="text-white border-t border-[#222028] px-3 pt-10 pb-8 sm:px-20">
     <div class="md:hidden">
-      <HotFlix />
+      <router-link :to="{path :'/'}">
+        <HotFlix />
+      </router-link>
       <ul class="flex text-sm my-8">
         <li class="hover:hover mr-5">About Us</li>
         <li class="hover:hover mr-5">Contacts</li>
@@ -44,9 +46,15 @@ function scrollToTop() {
 
       <div class="flex justify-between">
         <ul class="flex text-sm my-8">
-          <li class="hover:hover mr-5">About Us</li>
-          <li class="hover:hover mr-5">Contacts</li>
-          <li class="hover:hover mr-5">Privacy Policy</li>
+          <router-link :to="{path: '/about'}">
+            <li class="hover:hover mr-5">About Us</li>
+          </router-link>
+          <router-link :to="{path: '/contact'}">
+            <li class="hover:hover mr-5">Contacts</li>
+          </router-link>
+          <router-link :to="{path: '/privacy'}">
+            <li class="hover:hover mr-5">Privacy Policy</li>
+          </router-link>
         </ul>
         <ButtonOrange class="h-10 px-3.5 mt-5" @click="scrollToTop">
           <fa icon="arrow-up" />

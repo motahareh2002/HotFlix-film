@@ -5,19 +5,32 @@ import ForgotPass from '@/views/Authentication/ForgotPass.vue'
 import HomeLayout from '@/layout/HomeLayout.vue'
 import SignInLayout from '@/layout/SignInLayout.vue'
 import SignUp from '@/views/Authentication/SignUp.vue'
-import NewReleases from '@/components/newItems/NewReleases.vue'
-import TvSeries from '@/components/newItems/TvSeries.vue'
-import MoviesItem from '@/components/newItems/MoviesItem.vue'
-import CartonsITem from '@/components/newItems/CartonsITem.vue'
+import CatalogView from '@/views/CatalogView.vue'
+import PricingPlanViewVue from '@/views/PricingPlanView.vue'
+import NotFoundViewVue from '@/views/NotFoundView.vue'
+import AboutView from '@/views/AboutView.vue'
+import ContactsView from '@/views/ContactsView.vue'
+import HelpCenterView from '@/views/HelpCenterView.vue'
+import PrivacyPolicyViewVue from '@/views/PrivacyPolicyView.vue'
+import ProfileView from '@/views/ProfileView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+
     {
       path: '/',
       name: 'home',
       component: HomeView,
       meta:{
           layout : HomeLayout
+      }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFoundViewVue,
+      meta:{
+          layout :SignInLayout
       }
     },
     {
@@ -45,28 +58,62 @@ const router = createRouter({
       }
     },
     {
-      path : '/RELEASES',
-      name : 'release',
-      component : NewReleases,
+      path: '/catalog',
+      name: 'catalog',
+      component: CatalogView,
       meta:{
-          layout : HomeLayout
+          layout :HomeLayout
       }
     },
     {
-      path : '/MOVIES',
-      name : 'MOVIES',
-      component : MoviesItem,
+      path: '/pricingPlan',
+      name: 'pricingPlan',
+      component: PricingPlanViewVue,
+      meta:{
+          layout :HomeLayout
+      }
+    },
+    
+    {
+      path: '/about',
+      name: 'About',
+      component: AboutView,
+      meta:{
+          layout :HomeLayout
+      }
     },
     {
-      path : '/SERIES',
-      name : 'SERIES',
-      component : TvSeries,
+      path: '/contact',
+      name: 'Contact',
+      component: ContactsView,
+      meta:{
+          layout :HomeLayout
+      }
     },
     {
-      path : '/CARTOONS',
-      name : 'CARTOONS',
-      component : CartonsITem,
-    }
+      path: '/helpCenter',
+      name: 'HelpCenter',
+      component: HelpCenterView,
+      meta:{
+          layout :HomeLayout
+      }
+    },
+    {
+      path: '/privacy',
+      name: 'PrivacyPolicy',
+      component: PrivacyPolicyViewVue,
+      meta:{
+          layout :HomeLayout
+      }
+    },
+    {
+      path: '/Profile',
+      name: 'Profile',
+      component: ProfileView,
+      meta:{
+          layout :HomeLayout
+      }
+    },
   ]
 })
 
