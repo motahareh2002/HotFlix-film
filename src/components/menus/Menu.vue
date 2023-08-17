@@ -4,10 +4,19 @@ import CaretDownIcon from "../icons/caretDownIcon.vue";
 import SignIn from "../icons/SignIn.vue";
 import SearchInput from "../searchComp/SearchInput.vue";
 import MoreMenu from "./MoreMenu.vue";
-import { ref } from "vue";
-let show = ref(false);
+import { ref, onMounted  } from "vue";
+import type { Ref } from "vue";
+const show: Ref<boolean> = ref(false);
+const scroll: Ref<boolean> = ref(false);
 function showMenu() {
   show.value = !show.value;
+}
+onMounted(() => {
+  window.addEventListener('scroll',x)
+});
+function x(){
+    if(window.scrollY > 1) scroll.value = true
+    else scroll.value = false
 }
 </script>
 
@@ -15,6 +24,7 @@ function showMenu() {
 
 <template>
   <header
+    :class="{ 'header': scroll }"
     class="hidden lg:block px-24 py-4 border-b border-[#222028] text-[#FFFFFF]"
   >
     <div class="flex justify-between items-center">
@@ -52,6 +62,15 @@ function showMenu() {
     </div>
     <MoreMenu v-if="show" class="w-[13%] absolute left-1/2 h-[250px]" />
   </header>
-
 </template>
     
+<style scoped>
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 200;
+  background-color: #1a191f;
+}
+</style>

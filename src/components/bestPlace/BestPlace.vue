@@ -1,7 +1,4 @@
 
-<script setup>
-</script>
-
 
 <template>
   <div class="pt-10 pb-8 px-4 sm:px-20 text-[#FFFFFF]">

@@ -11,7 +11,7 @@ function scrollToTop() {
 }
 </script>
 <template>
-  <div class="text-white border-t border-[#222028] px-3 pt-10 pb-8 sm:px-20">
+  <footer class="text-white border-t border-[#222028] px-3 pt-10 pb-8 sm:px-20">
     <div class="md:hidden">
       <HotFlix />
       <ul class="flex text-sm my-8">
@@ -53,5 +53,5 @@ function scrollToTop() {
         </ButtonOrange>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
