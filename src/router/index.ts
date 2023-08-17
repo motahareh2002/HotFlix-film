@@ -13,6 +13,10 @@ import ContactsView from '@/views/ContactsView.vue'
 import HelpCenterView from '@/views/HelpCenterView.vue'
 import PrivacyPolicyViewVue from '@/views/PrivacyPolicyView.vue'
 import ProfileView from '@/views/ProfileView.vue'
+import CartonsITem from '@/components/newItems/CartonsITem.vue'
+import MoviesItem from '@/components/newItems/MoviesItem.vue'
+import NewReleases from '@/components/newItems/NewReleases.vue'
+import TvSeries from '@/components/newItems/TvSeries.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -23,7 +27,13 @@ const router = createRouter({
       component: HomeView,
       meta:{
           layout : HomeLayout
-      }
+      },
+      children:[
+        {path : 'carton' , name : 'Carton', component : CartonsITem},
+        {path : 'movie' , name : 'movie', component : MoviesItem},
+        {path : 'newRelease' , name : 'newRelease', component : NewReleases},
+        {path : 'tvSeries' , name : 'tvSeries', component : TvSeries},
+      ]
     },
     {
       path: '/:pathMatch(.*)*',

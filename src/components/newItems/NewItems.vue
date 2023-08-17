@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import type { Ref } from "vue";
 import ListIcon from "../icons/ListIcon.vue";
-import NewReleases from "./NewReleases.vue";
+// import NewReleases from "./NewReleases.vue";
 import CloseIcon from "../icons/CloseIcon.vue";
 const isOpen: Ref<boolean> = ref(false);
 const x: Ref<string> = ref("RELEASES");
@@ -25,10 +25,20 @@ function subMenuOpen() {
         <CloseIcon v-else class="ml-2" />
       </button>
       <ul class="md:flex text-xs mt-2 hidden">
-        <li class="mr-5 hover:hover cursor-pointer border-b-2 border-primary pb-3">NEW RELEASES</li>
-        <li class="mr-5 hover:hover cursor-pointer">MOVIES</li>
-        <li class="mr-5 hover:hover cursor-pointer">TV SERIES</li>
-        <li class="mr-5 hover:hover cursor-pointer">CARTOONS</li>
+        <router-link  active-class="active" :to="{path : 'newRelease'}">
+            <li class="mr-5  text-center w-24 hover:hover cursor-pointer  pb-3">
+          NEW RELEASES
+        </li>
+        </router-link>
+        <router-link  active-class="active"  :to="{path : 'movie'}">
+          <li class="mr-5 text-center w-24 hover:hover cursor-pointer">MOVIES</li>
+        </router-link>
+        <router-link  active-class="active"  :to="{path : 'tvSeries'}">
+          <li class="mr-5  text-center w-24 hover:hover cursor-pointer">TV SERIES</li>
+        </router-link>
+        <router-link  active-class="active"  :to="{path : 'carton'}">
+          <li class="mr-5  text-center w-24 hover:hover cursor-pointer">CARTOONS</li>
+        </router-link>
       </ul>
     </div>
     <div class="relative">
@@ -37,53 +47,70 @@ function subMenuOpen() {
         v-if="isOpen"
       >
         <ul>
-          <li
-            class="pb-3 cursor-pointer"
-            @click="
-              () => {
-                x = 'RELEASES';
-                isOpen = false;
-              }
-            "
-          >
-            NEW RELEASES
-          </li>
-          <li
-            class="pb-3 cursor-pointer"
-            @click="
-              () => {
-                x = 'MOVIES';
-                isOpen = false;
-              }
-            "
-          >
-            MOVIES
-          </li>
-          <li
-            class="pb-3 cursor-pointer"
-            @click="
-              () => {
-                x = 'SERIES';
-                isOpen = false;
-              }
-            "
-          >
-            TV SERIES
-          </li>
-          <li
-            class="cursor-pointer"
-            @click="
-              () => {
-                x = 'CARTOONS';
-                isOpen = false;
-              }
-            "
-          >
-            CARTOONS
-          </li>
+          <router-link :to="{ path: 'newRelease' }">
+            <li
+              class="pb-3 cursor-pointer"
+              @click="
+                () => {
+                  x = 'RELEASES';
+                  isOpen = false;
+                }
+              "
+            >
+              NEW RELEASES
+            </li>
+          </router-link>
+          <router-link :to="{ path: 'movie' }">
+            <li
+              class="pb-3 cursor-pointer"
+              @click="
+                () => {
+                  x = 'MOVIES';
+                  isOpen = false;
+                }
+              "
+            >
+              MOVIES
+            </li>
+          </router-link>
+          <router-link :to="{ path: 'tvSeries' }">
+            <li
+              class="pb-3 cursor-pointer"
+              @click="
+                () => {
+                  x = 'SERIES';
+                  isOpen = false;
+                }
+              "
+            >
+              TV SERIES
+            </li>
+          </router-link>
+          <router-link :to="{ path: 'carton' }">
+            <li
+              class="cursor-pointer"
+              @click="
+                () => {
+                  x = 'CARTOONS';
+                  isOpen = false;
+                }
+              "
+            >
+              CARTOONS
+            </li>
+          </router-link>
         </ul>
       </div>
-      <new-releases/>
+      
+      <router-view />
     </div>
   </div>
 </template>
+
+
+<style scoped>
+.active{
+  border-bottom: 2px solid #f9ab00;
+}
+</style>
+<!-- border-b-2 border-primary -->
