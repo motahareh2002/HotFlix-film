@@ -103,7 +103,7 @@ const buttons: button[] = [
       :client="btn.clients"
     />
   </div> -->
-  <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 px-4 sm:px-20">
+  <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 px-1 sm:px-20">
     <div
       v-for="button in buttons"
       :key="button.id"

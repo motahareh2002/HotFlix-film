@@ -4,7 +4,7 @@
   <ul
     class="flex flex-col items-start px-5 bg-[#222028] 
     text-[#FFFFFF] rounded-lg
-    overflow-y-auto mt-4"
+    overflow-y-auto mt-4 z-50"
   >
     <button class="py-2 hover:hover">
       <li>About</li>
