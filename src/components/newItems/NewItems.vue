@@ -3,13 +3,16 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import type { Ref } from "vue";
 import ListIcon from "../icons/ListIcon.vue";
-// import NewReleases from "./NewReleases.vue";
+import NewReleases from "./NewReleases.vue";
 import CloseIcon from "../icons/CloseIcon.vue";
 const isOpen: Ref<boolean> = ref(false);
 const x: Ref<string> = ref("RELEASES");
-const router = useRouter();
+const show: Ref<boolean> = ref(false);
 function subMenuOpen() {
   isOpen.value = !isOpen.value;
+}
+function clickHandler() {
+  show.value = true;
 }
 </script>
 
@@ -25,19 +28,33 @@ function subMenuOpen() {
         <CloseIcon v-else class="ml-2" />
       </button>
       <ul class="md:flex text-xs mt-2 hidden">
-        <router-link  active-class="active" :to="{path : 'newRelease'}">
-            <li class="mr-5  text-center w-24 hover:hover cursor-pointer  pb-3">
-          NEW RELEASES
-        </li>
+        <router-link active-class="active" :to="{ path: 'newRelease' }">
+          <button @click="clickHandler">
+            <li class="mr-5 text-center w-24 hover:hover cursor-pointer pb-3">
+              NEW RELEASES
+            </li>
+          </button>
         </router-link>
-        <router-link  active-class="active"  :to="{path : 'movie'}">
-          <li class="mr-5 text-center w-24 hover:hover cursor-pointer">MOVIES</li>
+        <router-link active-class="active" :to="{ path: 'movie' }">
+          <button  @click="clickHandler">
+            <li class="mr-5 text-center w-24 hover:hover cursor-pointer">
+              MOVIES
+            </li>
+          </button>
         </router-link>
-        <router-link  active-class="active"  :to="{path : 'tvSeries'}">
-          <li class="mr-5  text-center w-24 hover:hover cursor-pointer">TV SERIES</li>
+        <router-link active-class="active" :to="{ path: 'tvSeries' }">
+          <button  @click="clickHandler">
+            <li class="mr-5 text-center w-24 hover:hover cursor-pointer">
+              TV SERIES
+            </li>
+          </button>
         </router-link>
-        <router-link  active-class="active"  :to="{path : 'carton'}">
-          <li class="mr-5  text-center w-24 hover:hover cursor-pointer">CARTOONS</li>
+        <router-link active-class="active" :to="{ path: 'carton' }">
+          <button  @click="clickHandler">
+            <li class="mr-5 text-center w-24 hover:hover cursor-pointer">
+              CARTOONS
+            </li>
+          </button>
         </router-link>
       </ul>
     </div>
@@ -52,8 +69,9 @@ function subMenuOpen() {
               class="pb-3 cursor-pointer"
               @click="
                 () => {
-                  x = 'RELEASES';
+                  x = 'NEW RELEASES';
                   isOpen = false;
+                  show = true
                 }
               "
             >
@@ -67,6 +85,7 @@ function subMenuOpen() {
                 () => {
                   x = 'MOVIES';
                   isOpen = false;
+                  show = true
                 }
               "
             >
@@ -78,8 +97,9 @@ function subMenuOpen() {
               class="pb-3 cursor-pointer"
               @click="
                 () => {
-                  x = 'SERIES';
+                  x = 'TV SERIES';
                   isOpen = false;
+                  show = true
                 }
               "
             >
@@ -93,6 +113,7 @@ function subMenuOpen() {
                 () => {
                   x = 'CARTOONS';
                   isOpen = false;
+                  show = true
                 }
               "
             >
@@ -101,16 +122,16 @@ function subMenuOpen() {
           </router-link>
         </ul>
       </div>
-      
-      <router-view />
+
+      <router-view v-if="show" />
+      <component :is="NewReleases" v-else />
     </div>
   </div>
 </template>
 
 
 <style scoped>
-.active{
+.active {
   border-bottom: 2px solid #f9ab00;
 }
 </style>
-<!-- border-b-2 border-primary -->
