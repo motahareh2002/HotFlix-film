@@ -22,8 +22,3 @@ let name: Ref<string> = ref("Catalog");
     <FooterPage />
   </div>
 </template>
-
-
-
-<style>
-</style>

@@ -8,7 +8,7 @@ import FooterPage from "@/components/footer/FooterPage.vue"
 import HeaderView from '@/components/header/HeaderView.vue'
 </script>
 <template>
-  <div class="selection:bg-primary selection:text-[#FFFFFF]">
+  <div>
     <header-view />
     <new-item-swipper />
     <new-items />
