@@ -1,15 +1,16 @@
+<script setup lang="ts">
+import FooterPage from '@/components/footer/FooterPage.vue';
+import HeaderView from '@/components/header/HeaderView.vue';
+import OurPartners from '@/components/partners/OurPartners.vue';
+</script>
+
+
+
 <template>
-  <div class="text-white">
-    Prifile page
+  <div>
+    <HeaderView />
+    <OurPartners />
+    <FooterPage />
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
