@@ -22,7 +22,7 @@ const features: featuresType[] = [
   },
   {
     id: 3,
-    icon: "award",
+    icon: "trophy",
     title: "Awards",
     text: "It to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining.",
   },
@@ -57,6 +57,7 @@ const features: featuresType[] = [
       <FeaturesTask
         v-for="feature in features"
         :key="feature.id"
+        :id="feature.id"
         :icon="feature.icon"
         :title="feature.title"
         :text="feature.text"

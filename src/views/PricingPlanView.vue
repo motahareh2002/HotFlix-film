@@ -7,6 +7,7 @@ import FooterPage from "@/components/footer/FooterPage.vue";
 import SectionTop from "@/components/sections/SectionTop.vue";
 import PricePlace from '@/components/bestPlace/PricePlace.vue';
 import OurFeatures from '@/components/features/OurFeatures.vue'
+import OurPartners from '@/components/partners/OurPartners.vue';
 let name: Ref<string> = ref("Pricing plan");
 </script>
 <template>
@@ -15,6 +16,7 @@ let name: Ref<string> = ref("Pricing plan");
     <SectionTop :Name="name" />
     <PricePlace  class="mt-20"/>
     <our-features />
+    <OurPartners />
     <FooterPage />
   </div>
 </template>

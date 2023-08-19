@@ -1,13 +1,6 @@
 
 
 <script setup lang="ts">
-import { defineProps } from "vue";
-interface featuresType {
-  id: number;
-  icon: string;
-  title: string;
-  text: string;
-}
 defineProps({
   icon: {
     type: String,
@@ -18,16 +11,51 @@ defineProps({
   text: {
     type: String,
   },
+  id: {
+    type: Number,
+  },
 });
 </script>
 
 <template>
   <div class="flex items-start my-8 md:w-11/12">
-    <fa :icon="icon" class="text-primary text-3xl" />
+    <fa v-if="id === 2" icon="film" class="text-primary text-3xl" />
+    <svg
+      v-else-if="id === 6"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0,0,256,256"
+      width="48px"
+      height="48px"
+      fill-rule="nonzero"
+    >
+      <g
+        fill="#f9ab00"
+        fill-rule="nonzero"
+        stroke="none"
+        stroke-width="1"
+        stroke-linecap="butt"
+        stroke-linejoin="miter"
+        stroke-miterlimit="10"
+        stroke-dasharray=""
+        stroke-dashoffset="0"
+        font-family="none"
+        font-weight="none"
+        font-size="none"
+        text-anchor="none"
+        style="mix-blend-mode: normal"
+      >
+        <g transform="scale(10.66667,10.66667)">
+          <path
+            d="M12,2c-5.514,0 -10,4.486 -10,10c0,5.514 4.486,10 10,10c5.514,0 10,-4.486 10,-10c0,-5.514 -4.486,-10 -10,-10zM19.931,11h-1.96c-0.081,-1.417 -0.334,-2.736 -0.722,-3.907c0.265,-0.122 0.503,-0.258 0.716,-0.405c1.052,1.179 1.759,2.667 1.966,4.312zM13,4.297c0.516,0.297 1.016,0.811 1.457,1.508c-0.436,0.073 -0.915,0.131 -1.457,0.163zM11,4.297v1.671c-0.542,-0.032 -1.021,-0.091 -1.457,-0.163c0.441,-0.697 0.941,-1.211 1.457,-1.508zM11,7.971v3.029h-2.965c0.081,-1.237 0.309,-2.352 0.635,-3.313c0.73,0.149 1.521,0.242 2.33,0.284zM11,13v3.029c-0.809,0.042 -1.6,0.136 -2.33,0.285c-0.326,-0.962 -0.554,-2.077 -0.635,-3.314zM11,18.032v1.671c-0.516,-0.297 -1.016,-0.811 -1.457,-1.508c0.436,-0.073 0.915,-0.131 1.457,-0.163zM13,19.703v-1.671c0.542,0.032 1.021,0.091 1.457,0.163c-0.441,0.697 -0.941,1.211 -1.457,1.508zM13,16.029v-3.029h2.965c-0.081,1.237 -0.309,2.352 -0.635,3.313c-0.73,-0.149 -1.521,-0.242 -2.33,-0.284zM13,11v-3.029c0.809,-0.042 1.6,-0.136 2.33,-0.285c0.326,0.962 0.554,2.077 0.635,3.313l-2.965,0.001zM6.035,6.688c0.214,0.147 0.451,0.283 0.716,0.405c-0.388,1.171 -0.641,2.49 -0.722,3.907h-1.96c0.207,-1.645 0.914,-3.133 1.966,-4.312zM4.069,13h1.96c0.081,1.417 0.334,2.736 0.722,3.907c-0.265,0.122 -0.503,0.258 -0.716,0.405c-1.052,-1.179 -1.759,-2.667 -1.966,-4.312zM17.965,17.312c-0.214,-0.147 -0.451,-0.283 -0.716,-0.405c0.388,-1.171 0.641,-2.49 0.722,-3.907h1.96c-0.207,1.645 -0.914,3.133 -1.966,4.312z"
+          ></path>
+        </g>
+      </g>
+    </svg>
+    <fa v-else :icon="icon" class="text-primary text-3xl" />
     <div class="flex flex-col ml-6">
-      <span class="font-bold mb-3">{{ title}}</span>
+      <span class="font-bold mb-3">{{ title }}</span>
       <p class="text-sm">
-        {{ text}}
+        {{ text }}
       </p>
     </div>
   </div>
