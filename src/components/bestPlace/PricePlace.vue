@@ -93,16 +93,6 @@ const buttons: button[] = [
 </script>
 
 <template>
-  <!-- <div v-for="btn in buttons" :key="btn.id">
-    <ButtonPriceVue
-      :title="btn.title"
-      :price="btn.price"
-      :status="btn.status"
-      :color="btn.color"
-      :clients="btn.clients"
-      :client="btn.clients"
-    />
-  </div> -->
   <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 px-1 sm:px-20">
     <div
       v-for="button in buttons"

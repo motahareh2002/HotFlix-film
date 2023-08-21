@@ -17,6 +17,9 @@ import CartonsITem from '@/components/newItems/CartonsITem.vue'
 import MoviesItem from '@/components/newItems/MoviesItem.vue'
 import NewReleases from '@/components/newItems/NewReleases.vue'
 import TvSeries from '@/components/newItems/TvSeries.vue'
+import ProfileMain from '@/components/profile/ProfileMain.vue'
+import PricePlace from '@/components/bestPlace/PricePlace.vue'
+import ProfileSetting from '@/components/profile/ProfileSetting.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -122,7 +125,12 @@ const router = createRouter({
       component: ProfileView,
       meta:{
           layout :HomeLayout
-      }
+      },
+      children:[
+        {path : 'profileTo' , name : 'profileTo', component : ProfileMain},
+        {path : 'subscription' , name : 'subscription', component : PricePlace},
+        {path : 'setting' , name : 'setting', component : ProfileSetting},
+      ]
     },
   ]
 })

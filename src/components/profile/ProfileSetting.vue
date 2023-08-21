@@ -1,0 +1,55 @@
+
+<script setup lang="ts">
+import ButtonOrange from "../btns/buttonOrange.vue";
+</script>
+
+<template>
+  <div class="md:flex items-start">
+    <div class="border border-[#222028] p-3 md:p-6 rounded-md mb-6 md:w-1/2 mr-5">
+      <h3 class="text-xl">Profile Details</h3>
+      <form class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-3">
+        <div class="flex flex-col">
+          <label class="text-xs mt-4 mb-2">Username</label>
+          <input type="text" placeholder="User 123" class="form-input p-2.5" />
+        </div>
+        <div class="flex flex-col">
+          <label class="text-xs mt-4 mb-2">Email</label>
+          <input
+            type="email"
+            placeholder="email@gmail.com"
+            class="form-input p-2.5"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label class="text-xs mt-4 mb-2">First Name</label>
+          <input type="text" placeholder="Motahareh" class="form-input p-2.5" />
+        </div>
+        <div class="flex flex-col">
+          <label class="text-xs mt-4 mb-2">Last Name</label>
+          <input type="text" placeholder="Jafarian" class="form-input p-2.5" />
+        </div>
+        <ButtonOrange class="w-1/2 mt-6 mb-3 py-2">SAVE</ButtonOrange>
+      </form>
+    </div>
+    <div class="border border-[#222028] p-3 md:p-6 rounded-md md:w-1/2 md:h-[475px] lg:h-auto">
+      <h3 class="text-xl">Change Password</h3>
+      <form class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-3">
+        <div class="flex flex-col">
+          <label class="text-xs mt-4 mb-2">Old Password</label>
+          <input type="password" class="form-input p-2.5" />
+        </div>
+        <div class="flex flex-col">
+          <label class="text-xs mt-4 mb-2">New Password</label>
+          <input type="password" class="form-input p-2.5" />
+        </div>
+
+        <div class="flex flex-col col-span-2">
+          <label class="text-xs mt-4 mb-2">Confirm new password</label>
+          <input type="password" class="form-input p-2.5" />
+        </div>
+        <ButtonOrange class="w-1/2 mt-6 mb-3 py-2">CHANGE</ButtonOrange>
+      </form>
+    </div>
+  </div>
+</template>
+
