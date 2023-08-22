@@ -20,6 +20,7 @@ import TvSeries from '@/components/newItems/TvSeries.vue'
 import ProfileMain from '@/components/profile/ProfileMain.vue'
 import PricePlace from '@/components/bestPlace/PricePlace.vue'
 import ProfileSetting from '@/components/profile/ProfileSetting.vue'
+import MovieDetails from '@/views/MovieDetails.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -28,108 +29,117 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta:{
-          layout : HomeLayout
+      meta: {
+        layout: HomeLayout
       },
-      children:[
-        {path : 'carton' , name : 'Carton', component : CartonsITem},
-        {path : 'movie' , name : 'movie', component : MoviesItem},
-        {path : 'newRelease' , name : 'newRelease', component : NewReleases},
-        {path : 'tvSeries' , name : 'tvSeries', component : TvSeries},
+      children: [
+        { path: 'carton', name: 'Carton', component: CartonsITem },
+        { path: 'movie', name: 'movie', component: MoviesItem },
+        { path: 'newRelease', name: 'newRelease', component: NewReleases },
+
+        { path: 'tvSeries', name: 'tvSeries', component: TvSeries },
       ]
+    },
+    {
+      path: '/:id',
+      name: 'movieDatails',
+      component: MovieDetails ,
+      meta: {
+        layout: HomeLayout
+      },
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: NotFoundViewVue,
-      meta:{
-          layout :SignInLayout
+      meta: {
+        layout: SignInLayout
       }
     },
     {
       path: '/signIn',
       name: 'signIn',
       component: SignIn,
-      meta:{
-          layout : SignInLayout
+      meta: {
+        layout: SignInLayout
       }
     },
     {
-      path : '/signUp',
-      name : 'signUp',
-      component : SignUp,
-      meta:{
-          layout : SignInLayout
+      path: '/signUp',
+      name: 'signUp',
+      component: SignUp,
+      meta: {
+        layout: SignInLayout
       }
     },
     {
       path: '/forgotPass',
       name: 'forgot',
       component: ForgotPass,
-      meta:{
-          layout :SignInLayout
+      meta: {
+        layout: SignInLayout
       }
     },
     {
       path: '/catalog',
       name: 'catalog',
       component: CatalogView,
-      meta:{
-          layout :HomeLayout
+      meta: {
+        layout: HomeLayout
       }
     },
     {
       path: '/pricingPlan',
       name: 'pricingPlan',
       component: PricingPlanViewVue,
-      meta:{
-          layout :HomeLayout
+      meta: {
+        layout: HomeLayout
       }
     },
-    
+
     {
       path: '/about',
       name: 'About',
       component: AboutView,
-      meta:{
-          layout :HomeLayout
+      meta: {
+        layout: HomeLayout
       }
     },
     {
       path: '/contact',
       name: 'Contact',
       component: ContactsView,
-      meta:{
-          layout :HomeLayout
+      meta: {
+        layout: HomeLayout
       }
     },
     {
       path: '/helpCenter',
       name: 'HelpCenter',
       component: HelpCenterView,
-      meta:{
-          layout :HomeLayout
+      meta: {
+        layout: HomeLayout
       }
     },
     {
       path: '/privacy',
       name: 'PrivacyPolicy',
       component: PrivacyPolicyViewVue,
-      meta:{
-          layout :HomeLayout
+      meta: {
+        layout: HomeLayout
       }
     },
     {
       path: '/Profile',
       name: 'Profile',
       component: ProfileView,
-      meta:{
-          layout :HomeLayout
+      meta: {
+        layout: HomeLayout
       },
-      children:[
-        {path : 'profileTo' , name : 'profileTo', component : ProfileMain},
-        {path : 'subscription' , name : 'subscription', component : PricePlace},
-        {path : 'setting' , name : 'setting', component : ProfileSetting},
+      children: [
+        { path: 'profileTo', name: 'profileTo', component: ProfileMain },
+        { path: 'subscription', name: 'subscription', component: PricePlace },
+        { path: 'setting', name: 'setting', component: ProfileSetting },
       ]
     },
   ]

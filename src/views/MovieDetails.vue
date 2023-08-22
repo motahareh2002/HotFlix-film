@@ -1,14 +1,39 @@
 <script setup lang="ts">
-import CardImg from "../cardImage/CardImg.vue";
-interface release {
+import { ref, onMounted } from "vue";
+import type { Ref } from "vue";
+import { useRoute } from "vue-router";
+import FooterPage from "@/components/footer/FooterPage.vue";
+import HeaderView from "@/components/header/HeaderView.vue";
+const route = useRoute();
+interface movieType {
   id: number;
   src: string;
   rate: number;
   detail: string;
   category: string;
 }
-const newRelease: release[] = [
-  
+const movies: movieType[] = [
+  {
+    id: 1,
+    src: "http://hotflix.volkovdesign.com/main/img/covers/cover.jpg",
+    detail: "I Dream in Another...",
+    category: "Action, Triler",
+    rate: 8.4,
+  },
+  {
+    id: 2,
+    src: "http://hotflix.volkovdesign.com/main/img/covers/cover2.jpg",
+    detail: "Benched",
+    category: "Comedy",
+    rate: 7.1,
+  },
+  {
+    id: 3,
+    src: "http://hotflix.volkovdesign.com/main/img/covers/cover3.jpg",
+    detail: "Whitney",
+    category: "Romance, Drama",
+    rate: 2.3,
+  },
   {
     id: 4,
     src: "http://hotflix.volkovdesign.com/main/img/covers/cover4.jpg",
@@ -115,22 +140,46 @@ const newRelease: release[] = [
     rate: 3.9,
   },
 ];
+const src: Ref<string> = ref("");
+const rate: Ref<number> = ref(0);
+const detail: Ref<string> = ref("");
+const category: Ref<string> = ref("");
+const borderColor: Ref<string> = ref("");
+onMounted(() => {
+  const index = +route.params.id - 1;
+  src.value = movies[index].src;
+  rate.value = movies[index].rate;
+  detail.value = movies[index].detail;
+  category.value = movies[index].category;
+  borderColor.value =
+    movies[index].rate > 7.5
+      ? "green"
+      : movies[index].rate > 5.6
+      ? "yellow"
+      : "red";
+});
 </script>
 
 
+
 <template>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 mt-5 pb-10 border-b border-[#222028]">
-    <CardImg
-      v-for="newR in newRelease"
-      :key="newR.id"
-      :id="newR.id"
-      :img="newR.src"
-      :rate="newR.rate"
-      :details="newR.detail"
-      :category="newR.category"
-      :borderColor="
-        newR.rate > 7.5 ? 'green' : newR.rate > 5.6 ? 'yellow' : 'red'"
-        class="mb-4"
-    />
+  <div>
+    <HeaderView />
+    <div class="text-[#FFFFFF] relative mt-10">
+      <h1 class="text-3xl px-3 sm:px-20 mb-5">{{ detail }}</h1>
+      <img :src="src" class="rounded-lg ml-3 sm:ml-20" />
+      <div
+        id="rate"
+        class="absolute top-16 left-5 sm:left-24 rounded-full border-2 text-white p-1"
+        :style="{
+          backgroundColor: 'rgba(26,25,31,0.6)',
+          borderColor: borderColor,
+        }"
+      >
+        <span>{{ rate }}</span>
+      </div>
+    </div>
+    <FooterPage />
   </div>
 </template>
+

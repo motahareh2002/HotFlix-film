@@ -131,6 +131,7 @@ function prevITem() {
         >
           <CardImg
             :img="sliderImage.src"
+            :id="sliderImage.id"
             :rate="sliderImage.rate"
             :details="sliderImage.detail"
             :category="sliderImage.category"

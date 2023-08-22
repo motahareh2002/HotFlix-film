@@ -8,7 +8,6 @@ interface release {
   category: string;
 }
 const newRelease: release[] = [
-  
   {
     id: 6,
     src: "http://hotflix.volkovdesign.com/main/img/covers/cover6.jpg",
@@ -109,6 +108,7 @@ const newRelease: release[] = [
     <CardImg
       v-for="newR in newRelease"
       :key="newR.id"
+      :id="newR.id"
       :img="newR.src"
       :rate="newR.rate"
       :details="newR.detail"

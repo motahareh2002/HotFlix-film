@@ -3,6 +3,7 @@
 import ButtonPlay from '../btns/ButtonPlay.vue';
 
 const props = defineProps<{
+  id: number
   details?: string;
   category?: string;
   rate?: number;
@@ -21,7 +22,9 @@ const props = defineProps<{
           :src="`${img}`"
           class="rounded-lg brightness-75 group-hover:brightness-50 transition-all duration-300"
         />
-        <ButtonPlay class=" group-hover:visible"/>
+        <router-link :to="`/${id}`">
+          <ButtonPlay class=" group-hover:visible"/>
+        </router-link>
       </div>
       <div
         id="rate"

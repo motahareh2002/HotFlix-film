@@ -143,6 +143,7 @@ const newRelease: release[] = [
     <CardImg
       v-for="newR in newRelease"
       :key="newR.id"
+      :id = newR.id
       :img="newR.src"
       :rate="newR.rate"
       :details="newR.detail"
