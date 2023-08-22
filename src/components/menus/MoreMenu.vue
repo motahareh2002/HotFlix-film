@@ -29,9 +29,6 @@
         <li>Privacy policy</li>
       </button>
     </router-link>
-    <button class="py-2 hover:hover">
-      <li>Admin pages</li>
-    </button>
     <router-link :to="{ path: '/signIn' }">
       <button class="py-2 hover:hover">
         <li>Sign in</li>
