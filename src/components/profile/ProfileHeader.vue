@@ -2,12 +2,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import type { Ref } from "vue";
+import {UseName} from '@/stores/Names'
 import ButtonOrange from "../btns/buttonOrange.vue";
 import SignOutIcon from "../icons/SignOutIcon.vue";
 import UserIcon from "../icons/UserIcon.vue";
 import ListIcon from "../icons/ListIcon.vue";
 import CloseIcon from "../icons/CloseIcon.vue";
-import ProfileMain from './ProfileMain.vue';
+import ProfileMain from "./ProfileMain.vue";
 const isOpen: Ref<boolean> = ref(false);
 const text: Ref<string> = ref("PROFILE");
 const show: Ref<boolean> = ref(false);
@@ -17,6 +18,7 @@ function subMenuOpen() {
 function clickHandler() {
   show.value = true;
 }
+const name = UseName()
 </script>
 
 
@@ -29,40 +31,45 @@ function clickHandler() {
             <UserIcon />
           </div>
           <div class="text-sm">
-            <h1>Motahareh Jafarian</h1>
+            <h1>{{name.firstName}} {{name.lastName}}</h1>
             <span class="text-[rgba(255,255,255,0.7)] text-xs"
               >HOTFLIX ID : 15763</span
             >
           </div>
           <ul class="md:flex text-xs ml-5 hidden">
-            <router-link active-class="active" :to="{name:'profileTo'}">
+            <router-link active-class="active" :to="{ name: 'profileTo' }">
               <button @click="clickHandler">
-                <li class="mr-5 text-center w-24 pb-2 hover:hover cursor-pointer">
+                <li
+                  class="mr-5 text-center w-24 pb-2 hover:hover cursor-pointer"
+                >
                   PROFILE
                 </li>
               </button>
             </router-link>
-            <router-link active-class="active" :to="{ name : 'subscription' }">
+            <router-link active-class="active" :to="{ name: 'subscription' }">
               <button @click="clickHandler">
-                <li class="mr-5 text-center w-24  pb-2 hover:hover cursor-pointer">
+                <li
+                  class="mr-5 text-center w-24 pb-2 hover:hover cursor-pointer"
+                >
                   SUBSCRIPTION
                 </li>
               </button>
             </router-link>
             <router-link active-class="active" :to="{ path: 'setting' }">
               <button @click="clickHandler">
-                <li class="mr-5 text-center w-24  pb-2 hover:hover cursor-pointer">
+                <li
+                  class="mr-5 text-center w-24 pb-2 hover:hover cursor-pointer"
+                >
                   SETTINGS
                 </li>
               </button>
             </router-link>
           </ul>
         </div>
-        <ButtonOrange class="px-2 py-1 md:px-6 md:py-2">
-          <SignOutIcon class="md:hidden"/>
+        <ButtonOrange class="px-2 py-1 md:px-4 md:py-1">
+          <SignOutIcon class="md:hidden" />
           <span class="hidden md:block">LOGOUT</span>
         </ButtonOrange>
-        
       </div>
       <button class="text-xs md:hidden mt-8" @click="subMenuOpen">
         <span>{{ text }}</span>
@@ -72,7 +79,7 @@ function clickHandler() {
     </idv>
     <div class="relative">
       <div
-        class="bg-[#222028] rounded-lg text-[#FFFFFF] -top-8 text-xs w-[220px] absolute  px-4 py-5  z-50 md:hidden"
+        class="bg-[#222028] rounded-lg text-[#FFFFFF] -top-8 text-xs w-[220px] absolute px-4 py-5 z-50 md:hidden"
         v-if="isOpen"
       >
         <ul>
