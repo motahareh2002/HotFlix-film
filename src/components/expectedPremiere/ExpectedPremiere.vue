@@ -197,6 +197,7 @@ const newRelease: release[] = [
       <SwiperSlide v-for="newR in newRelease" :key="newR.id" class="">
         <CardImg
           :img="newR.src"
+          :id="newR.id"
           :rate="newR.rate"
           :details="newR.detail"
           :category="newR.category"

@@ -36,7 +36,6 @@ const router = createRouter({
         { path: 'carton', name: 'Carton', component: CartonsITem },
         { path: 'movie', name: 'movie', component: MoviesItem },
         { path: 'newRelease', name: 'newRelease', component: NewReleases },
-
         { path: 'tvSeries', name: 'tvSeries', component: TvSeries },
       ]
     },
