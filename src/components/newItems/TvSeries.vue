@@ -8,118 +8,84 @@ interface release {
   category: string;
 }
 const newRelease: release[] = [
-  
   {
-    id: 4,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover4.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
+    id: 31,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/7RRHbCUtAsVmKI6FEMzZB6Re88P.jpg",
+    detail: "Futurama ",
+    category: "Animation, Comedy",
     rate: 6.8,
   },
   {
-    id: 5,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover5.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
+    id: 32,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/klL4yhwiU8aF4AuF5dCfJA9sRnS.jpg",
+    detail: "Modern Family ",
+    category: "Comedy",
     rate: 3.9,
   },
   {
-    id: 6,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover6.jpg",
-    detail: "Benched",
-    category: "Comedy",
+    id: 33,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/6X2hftdC8y78SKMSgfzeUItqaVq.jpg",
+    detail: "Ancient Aliens ",
+    category: "Documentary, Mystery",
     rate: 7.1,
   },
   {
-    id: 7,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover7.jpg",
-    detail: "Benched",
-    category: "Comedy",
+    id: 34,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
+    detail: "Friends",
+    category: "Comedy, Drama",
     rate: 2.8,
   },
   {
-    id: 8,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover8.jpg",
-    detail: "I Dream in Another...",
-    category: "Action, Triler",
+    id: 35,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/daSFbrt8QCXV2hSwB0hqYjbj681.jpg",
+    detail: "Grey's Anatomy",
+    category: "Drama",
     rate: 5.5,
   },
   {
-    id: 9,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover9.jpg",
-    detail: "Benched",
+    id: 36,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/oGE7FI29ihpWlO4TAC7bJiswW4H.jpg",
+    detail: "Beverly Hillbillies ",
     category: "Comedy",
     rate: 6.6,
   },
   {
-    id: 10,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover10.jpg",
-    detail: "Whitney",
-    category: "Romance, Drama",
+    id: 37,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
+    detail: "Peaky Blinders",
+    category: "Drama, Crime",
     rate: 5.6,
   },
   {
-    id: 11,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover11.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
+    id: 38,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/r935SMphvXppx5bJjbIBNx02fwc.jpg",
+    detail: "The Blacklist",
+    category: "Crime, Mystery",
     rate: 9.2,
   },
   {
-    id: 12,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover12.jpg",
-    detail: "Benched",
-    category: "Comedy",
+    id: 39,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/ceqomvL0e1jGkJAPVWFlq2hGl7i.jpg",
+    detail: "Blue Bloods",
+    category: "Drama, Crime",
     rate: 5.6,
   },
   {
-    id: 13,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover13.jpg",
-    detail: "Benched",
-    category: "Comedy",
+    id: 40,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/joPhJJblNtFDOpp6zQlx0xJWsmM.jpg",
+    detail: "Bob's Burgers ",
+    category: "Comedy, Animation",
     rate: 4.9,
-  },
-  {
-    id: 14,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover14.jpg",
-    detail: "I Dream in Another...",
-    category: "Action, Triler",
-    rate: 7.2,
-  },
-  {
-    id: 15,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover15.jpg",
-    detail: "Benched",
-    category: "Comedy",
-    rate: 5.9,
-  },
-  {
-    id: 16,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover16.jpg",
-    detail: "Whitney",
-    category: "Romance, Drama",
-    rate: 2.5,
-  },
-  {
-    id: 17,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover17.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
-    rate: 6.8,
-  },
-  {
-    id: 18,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover18.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
-    rate: 3.9,
   },
 ];
 </script>
 
 
 <template>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 mt-5 pb-10 border-b border-[#222028]">
+  <div
+    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 mt-5 pb-10 border-b border-[#222028]"
+  >
     <CardImg
       v-for="newR in newRelease"
       :key="newR.id"
@@ -129,8 +95,9 @@ const newRelease: release[] = [
       :details="newR.detail"
       :category="newR.category"
       :borderColor="
-        newR.rate > 7.5 ? 'green' : newR.rate > 5.6 ? 'yellow' : 'red'"
-        class="mb-4"
+        newR.rate > 7.5 ? 'green' : newR.rate > 5.6 ? 'yellow' : 'red'
+      "
+      class="mb-4"
     />
   </div>
 </template>
