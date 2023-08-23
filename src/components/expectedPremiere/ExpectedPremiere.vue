@@ -3,11 +3,11 @@ import CardImg from "../cardImage/CardImg.vue";
 import AngleLeft from "../icons/AngleLeft.vue";
 import AngleRight from "../icons/AngleRight .vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import {Navigation } from 'swiper/modules';
-import 'swiper/css';
+import { Navigation } from "swiper/modules";
+import "swiper/css";
 
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 interface release {
   id: number;
   src: string;
@@ -17,130 +17,172 @@ interface release {
 }
 const newRelease: release[] = [
   {
-    id: 1,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover.jpg",
-    detail: "I Dream in Another...",
-    category: "Action, Triler",
-    rate: 8.4,
-  },
-  {
-    id: 2,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover2.jpg",
-    detail: "Benched",
-    category: "Comedy",
-    rate: 7.1,
-  },
-  {
-    id: 3,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover3.jpg",
-    detail: "Whitney",
-    category: "Romance, Drama",
-    rate: 2.3,
-  },
-  {
-    id: 4,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover4.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
-    rate: 6.8,
-  },
-  {
-    id: 5,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover5.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
-    rate: 3.9,
-  },
-  {
-    id: 6,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover6.jpg",
-    detail: "Benched",
-    category: "Comedy",
-    rate: 7.1,
-  },
-  {
-    id: 7,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover7.jpg",
-    detail: "Benched",
-    category: "Comedy",
-    rate: 2.8,
-  },
-  {
-    id: 8,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover8.jpg",
-    detail: "I Dream in Another...",
-    category: "Action, Triler",
-    rate: 5.5,
-  },
-  {
-    id: 9,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover9.jpg",
-    detail: "Benched",
-    category: "Comedy",
-    rate: 6.6,
-  },
-  {
-    id: 10,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover10.jpg",
-    detail: "Whitney",
-    category: "Romance, Drama",
-    rate: 5.6,
-  },
-  {
-    id: 11,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover11.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
-    rate: 9.2,
-  },
-  {
     id: 12,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover12.jpg",
-    detail: "Benched",
-    category: "Comedy",
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/4K7gQjD19CDEPd7A9KZwr2D9Nco.jpg",
+    detail: "No Hard Feelings",
+    category: "Comedy, Romance",
     rate: 5.6,
   },
   {
     id: 13,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover13.jpg",
-    detail: "Benched",
-    category: "Comedy",
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/fYx5q9hPAmbDrWzsYUDhxZJnigC.jpg",
+    detail: "The Winter King",
+    category: "Drama",
     rate: 4.9,
   },
   {
     id: 14,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover14.jpg",
-    detail: "I Dream in Another...",
-    category: "Action, Triler",
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/q17tXNROOslj7uCGicKNlIf9Rx6.jpg",
+    detail: "The Castle Quest",
+    category: "Animation",
     rate: 7.2,
   },
   {
     id: 15,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover15.jpg",
-    detail: "Benched",
-    category: "Comedy",
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+    detail: "One Piece",
+    category: "Action & Adventure",
     rate: 5.9,
   },
   {
     id: 16,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover16.jpg",
-    detail: "Whitney",
-    category: "Romance, Drama",
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/kgrLpJcLBbyhWIkK7fx1fM4iSvf.jpg",
+    detail: "Ruby Gillman,",
+    category: "Animation, Family",
     rate: 2.5,
   },
   {
     id: 17,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover17.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+    detail: "Guardians of Galaxy...",
+    category: "Adventure, Action",
     rate: 6.8,
   },
   {
     id: 18,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover18.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/ckW6FZqMFEKA9DonixjZSAPxJMo.jpg",
+    detail: "Gran Turismo",
+    category: "Action, Drama",
     rate: 3.9,
+  },
+  {
+    id: 24,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/ez1EDULOCUUCySHOZU6tz97qbtM.jpg",
+    detail: "Just Go with It",
+    category: "Comedy, Romance",
+    rate: 5.6,
+  },
+  {
+    id: 25,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/38Xr1JnV1ZcLQ55zmdSp6n475cZ.jpg",
+    detail: "Predestination",
+    category: "Science Fiction",
+    rate: 4.9,
+  },
+  {
+    id: 26,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/fLzlNq3fjNQ64TRRLKlNkrDpYLt.jpg",
+    detail: "Megalodon",
+    category: "Science Fiction",
+    rate: 7.2,
+  },
+  {
+    id: 27,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/g8KB77SPA7SyU8eid6TAEpt9skU.jpg",
+    detail: "Redemptio",
+    category: "Action, Thriller",
+    rate: 5.9,
+  },
+  {
+    id: 28,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+    detail: "Far From Home",
+    category: "Action, Adventure",
+    rate: 2.5,
+  },
+  {
+    id: 29,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/eoMsojXOiO18leSgHHOxzYOtG5o.jpg",
+    detail: "Grotesque",
+    category: "Horror, Comedy",
+    rate: 6.8,
+  },
+  {
+    id: 30,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/dnN1ncxEOO1TY0gYL2FWxJqlhlL.jpg",
+    detail: "The Silencing",
+    category: "Thriller, Action",
+    rate: 3.9,
+  },
+  {
+    id: 31,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/7RRHbCUtAsVmKI6FEMzZB6Re88P.jpg",
+    detail: "Futurama ",
+    category: "Animation, Comedy",
+    rate: 6.8,
+  },
+  {
+    id: 32,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/klL4yhwiU8aF4AuF5dCfJA9sRnS.jpg",
+    detail: "Modern Family ",
+    category: "Comedy",
+    rate: 3.9,
+  },
+  {
+    id: 33,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/6X2hftdC8y78SKMSgfzeUItqaVq.jpg",
+    detail: "Ancient Aliens ",
+    category: "Documentary, Mystery",
+    rate: 7.1,
+  },
+  {
+    id: 34,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
+    detail: "Friends",
+    category: "Comedy, Drama",
+    rate: 2.8,
+  },
+  {
+    id: 35,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/daSFbrt8QCXV2hSwB0hqYjbj681.jpg",
+    detail: "Grey's Anatomy",
+    category: "Drama",
+    rate: 5.5,
+  },
+  {
+    id: 36,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/oGE7FI29ihpWlO4TAC7bJiswW4H.jpg",
+    detail: "Beverly Hillbillies ",
+    category: "Comedy",
+    rate: 6.6,
+  },
+  {
+    id: 37,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
+    detail: "Peaky Blinders",
+    category: "Drama, Crime",
+    rate: 5.6,
+  },
+  {
+    id: 38,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/r935SMphvXppx5bJjbIBNx02fwc.jpg",
+    detail: "The Blacklist",
+    category: "Crime, Mystery",
+    rate: 9.2,
+  },
+  {
+    id: 39,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/ceqomvL0e1jGkJAPVWFlq2hGl7i.jpg",
+    detail: "Blue Bloods",
+    category: "Drama, Crime",
+    rate: 5.6,
+  },
+  {
+    id: 40,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/joPhJJblNtFDOpp6zQlx0xJWsmM.jpg",
+    detail: "Bob's Burgers ",
+    category: "Comedy, Animation",
+    rate: 4.9,
   },
 ];
 </script>
@@ -151,7 +193,7 @@ const newRelease: release[] = [
     <div class="text-[#FFFFFF] md:flex justify-between">
       <h1 class="text-2xl">Expected premiere</h1>
       <div class="flex justify-between mt-5 mb-8">
-        <router-link :to="{path: '/catalog'}">
+        <router-link :to="{ path: '/catalog' }">
           <button class="bg-[#222028] px-2 py-1 rounded-md text-sm hover:hover">
             View All
           </button>
@@ -160,7 +202,9 @@ const newRelease: release[] = [
           <AngleLeft
             class="bg-[#222028] px-2.5 py-1 rounded-md ml-8 mr-5 hover:hover prev"
           />
-          <AngleRight class="bg-[#222028] px-2.5 py-1 rounded-md hover:hover next" />
+          <AngleRight
+            class="bg-[#222028] px-2.5 py-1 rounded-md hover:hover next"
+          />
         </div>
       </div>
     </div>
@@ -168,8 +212,8 @@ const newRelease: release[] = [
       :rewind="true"
       :modules="[Navigation]"
       :navigation="{
-        nextEl : '.next',
-        prevEl : '.prev'
+        nextEl: '.next',
+        prevEl: '.prev',
       }"
       :pagination="{
         clickable: true,
@@ -187,10 +231,10 @@ const newRelease: release[] = [
           slidesPerView: 4,
           spaceBetween: 5,
         },
-        '1200':{
-            slidesPerView: 6,
-            spaceBetween: 5,
-          }
+        '1200': {
+          slidesPerView: 6,
+          spaceBetween: 5,
+        },
       }"
       class="mySwiper"
     >

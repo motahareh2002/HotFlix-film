@@ -5,7 +5,7 @@ import CardImg from "../cardImage/CardImg.vue";
 import { ref } from "vue";
 import type { Ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import {Navigation } from 'swiper/modules';
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 
 import "swiper/css/pagination";
@@ -29,39 +29,88 @@ const backImg: backImage[] = [
 ];
 const sliderImages: slider[] = [
   {
-    id: 1,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover.jpg",
-    detail: "I Dream in Another...",
-    category: "Action, Triler",
-    rate: 8.4,
+    id: 34,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
+    detail: "Friends",
+    category: "Comedy, Drama",
+    rate: 2.8,
   },
   {
-    id: 2,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover2.jpg",
-    detail: "Benched",
+    id: 35,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/daSFbrt8QCXV2hSwB0hqYjbj681.jpg",
+    detail: "Grey's Anatomy",
+    category: "Drama",
+    rate: 5.5,
+  },
+  {
+    id: 36,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/oGE7FI29ihpWlO4TAC7bJiswW4H.jpg",
+    detail: "Beverly Hillbillies ",
     category: "Comedy",
-    rate: 7.1,
+    rate: 6.6,
   },
   {
-    id: 3,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover3.jpg",
-    detail: "Whitney",
-    category: "Romance, Drama",
-    rate: 2.3,
+    id: 37,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
+    detail: "Peaky Blinders",
+    category: "Drama, Crime",
+    rate: 5.6,
   },
   {
-    id: 4,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover4.jpg",
-    detail: "Blindspotting",
+    id: 38,
+    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/r935SMphvXppx5bJjbIBNx02fwc.jpg",
+    detail: "The Blacklist",
+    category: "Crime, Mystery",
+    rate: 9.2,
+  },
+  {
+    id: 10,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/vB8o2p4ETnrfiWEgVxHmHWP9yRl.jpg",
+    detail: "Heart of Stone",
+    category: "Thriller, Action",
+    rate: 5.6,
+  },
+  {
+    id: 11,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/3O8uTUpt76ShtEtNNrOJpcwQROH.jpg",
+    detail: "Mask Girl",
     category: "Comedy, Drama",
-    rate: 6.8,
+    rate: 9.2,
   },
   {
-    id: 5,
-    src: "http://hotflix.volkovdesign.com/main/img/covers/cover5.jpg",
-    detail: "Blindspotting",
-    category: "Comedy, Drama",
-    rate: 3.9,
+    id: 12,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/4K7gQjD19CDEPd7A9KZwr2D9Nco.jpg",
+    detail: "No Hard Feelings",
+    category: "Comedy, Romance",
+    rate: 5.6,
+  },
+  {
+    id: 13,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/fYx5q9hPAmbDrWzsYUDhxZJnigC.jpg",
+    detail: "The Winter King",
+    category: "Drama",
+    rate: 4.9,
+  },
+  {
+    id: 14,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/q17tXNROOslj7uCGicKNlIf9Rx6.jpg",
+    detail: "The Castle Quest",
+    category: "Animation",
+    rate: 7.2,
+  },
+  {
+    id: 15,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+    detail: "One Piece",
+    category: "Action & Adventure",
+    rate: 5.9,
+  },
+  {
+    id: 16,
+    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/kgrLpJcLBbyhWIkK7fx1fM4iSvf.jpg",
+    detail: "Ruby Gillman,",
+    category: "Animation, Family",
+    rate: 2.5,
   },
 ];
 const index: Ref<number> = ref(0);
@@ -104,7 +153,7 @@ function prevITem() {
           clickable: true,
         }"
         :breakpoints="{
-          '100':{
+          '100': {
             slidesPerView: 2,
             spaceBetween: 1,
           },
@@ -113,14 +162,13 @@ function prevITem() {
             spaceBetween: 5,
           },
           '768': {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 5,
           },
-          
         }"
         :navigation="{
-          nextEl : '.next',
-          prevEl : '.prev'
+          nextEl: '.next',
+          prevEl: '.prev',
         }"
         class="mySwiper"
       >
