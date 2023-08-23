@@ -48,12 +48,16 @@ const router = createRouter({
       },
     },
     {
-      path: '/:pathMatch(.*)*',
+      path: '/404',
       name: 'NotFound',
       component: NotFoundViewVue,
       meta: {
         layout: SignInLayout
       }
+    },
+    {
+      path : '/:catchAll(.*)' ,
+      redirect : '/404'
     },
     {
       path: '/signIn',

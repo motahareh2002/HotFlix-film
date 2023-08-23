@@ -30,7 +30,7 @@ function clickHandler() {
       <ul class="md:flex text-xs mt-2 hidden">
         <router-link active-class="active" :to="{ path: 'newRelease' }">
           <button @click="clickHandler">
-            <li class="mr-5 text-center w-24 hover:hover cursor-pointer pb-3">
+            <li class="mr-5 text-center w-24 hover:hover cursor-pointer pb-3" :class="{'active' :!show }">
               NEW RELEASES
             </li>
           </button>

@@ -41,6 +41,7 @@ const name = UseName()
               <button @click="clickHandler">
                 <li
                   class="mr-5 text-center w-24 pb-2 hover:hover cursor-pointer"
+                  :class="{'active' : !show}"
                 >
                   PROFILE
                 </li>
