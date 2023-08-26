@@ -488,7 +488,7 @@ const router = useRouter();
 onMounted(() => {
   const index = +route.params.id - 1;
   const result = movies.find(({ id }) => id === +route.params.id);
-  if(result){
+  if (result) {
     src.value = movies[index].src;
     rate.value = movies[index].rate;
     detail.value = movies[index].detail;
@@ -502,11 +502,9 @@ onMounted(() => {
     releaseYear.value = movies[index].releaseYear;
     country.value = movies[index].country;
     director.value = movies[index].director;
-  }
-  else{
+  } else {
     router.push("/404");
   }
-
 });
 </script>
 
@@ -516,51 +514,68 @@ onMounted(() => {
   <div
     class="bg-[url('http://hotflix.volkovdesign.com/main/img/section/details.jpg')] pb-10"
   >
-    <div
-      class="text-[#FFFFFF] relative mt-10 px-3 sm:px-20 lg:w-1/2 lg:mx-auto"
-    >
-      <h1 class="text-3xl mb-5">{{ detail }}</h1>
-      <div class="md:flex">
-        <div class="md:w-1/3 lg:w-1/2">
-          <img :src="src" class="rounded-lg brightness-75 h-[350px]" />
-          <div
-            id="rate"
-            class="absolute top-16 left-5 sm:left-24 rounded-full border-2 text-white p-1"
-            :style="{
-              backgroundColor: 'rgba(26,25,31,0.6)',
-              borderColor: borderColor,
-            }"
-          >
-            <span>{{ rate }}</span>
-          </div>
+    <div class="text-[#FFFFFF] mt-10 px-3 sm:px-20">
+      <div class="px-3 lg:flex ">
+        <div class="flex justify-center lg:w-[30%]">
+          <img
+            :src="src"
+            class="rounded-lg brightness-90 w-full hover:brightness-100 md:w-[50%] lg:w-[75%]"
+          />
         </div>
-        <div class="md:w-2/3 md:ml-8 mt-5 md:mt-0">
-          <div class="flex flex-col text-sm mb-5">
-            <span class="mb-2">Director : {{ director }}</span>
-            <span class="mb-2"
-              >Genre : <span class="text-primary">{{ category }}</span></span
-            >
-            <span class="mb-2">Release Year : {{ releaseYear }}</span>
-            <span class="mb-2"
-              >Country : <span class="text-primary">{{ country }}</span></span
-            >
+
+        <div class="lg:w-[70%]">
+          <div class="lg:flex flex-col items-start">
+            <h1 class="text-2xl mt-5 mb-3 text-center">
+              {{ detail }} ({{ releaseYear }})
+            </h1>
+            <div class="flex items-center justify-center rounded-lg py-2">
+              <div
+                id="rate"
+                class="w-[40px] rounded-full border-4 text-white p-1 mr-4"
+                :style="{
+                  backgroundColor: 'rgba(26,25,31,0.6)',
+                  borderColor: borderColor,
+                }"
+              >
+                <span>{{ rate }}</span>
+              </div>
+              <span class="text-lg">User Score</span>
+            </div>
           </div>
-          <div
-            class="bg-[#222028] overflow-y-auto h-32 md:h-44 lg:h-[212px] leading-loose px-5 py-4 text-sm rounded-lg mb-4"
-          >
-            <p>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. The point of using
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making
-              it look like readable English.
-            </p>
+          <div class="">
+            <div class="text-center my-4 py-3 bg-[#222028] lg:bg-transparent lg:text-left">
+              <span class="mb-2 text-center text-primary">{{ category }}</span>
+            </div>
+            <div class="leading-relaxed py-4 text-sm rounded-lg mb-4 md:flex md:flex-col md:items-center lg:items-start">
+              <span class="text-xl">Overview :</span>
+              <p class="mt-3 md:text-center lg:text-left">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of letters, as opposed to using 'Content
+                here, content here', making it look like readable English. Many
+                desktop publishing packages and web page editors now use Lorem
+                Ipsum as their default model text, and a search for 'lorem
+                ipsum' will uncover many web sites still in their infancy. The
+                point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using 'Content here,
+                content here', making it look like readable English.
+              </p>
+              <div class="grid grid-cols-2 mt-5 md:grid-cols-3">
+                <span class=""
+                  >Release Year :
+                  <span class="text-primary">{{ releaseYear }}</span></span
+                >
+                <span class=""
+                  >Country :
+                  <span class="text-primary">{{ country }}</span></span
+                >
+                <span class="mt-3 md:mt-0"
+                  >Director :
+                  <span class="text-primary">{{ director }}</span></span
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
