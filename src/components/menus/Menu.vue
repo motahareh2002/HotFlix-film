@@ -54,12 +54,12 @@ function x(){
             <li class="font-bold text-xl">...</li>
           </button>
         </ul>
-        <div class="flex justify-between items-center w-3/6">
-          <SearchInput class="text-sm" />
-          <div class="flex items-center hover:hover">
+        <div class="flex justify-end items-center w-3/6">
+          <SearchInput class="text-sm mr-10" />
+          <!-- <div class="flex items-center hover:hover">
             <span class="mr-1">En</span>
             <caret-down-icon />
-          </div>
+          </div> -->
           <div>
             <router-link :to="{ path: '/signIn' }">
               <Sign-In />

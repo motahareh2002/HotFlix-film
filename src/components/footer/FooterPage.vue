@@ -11,7 +11,7 @@ function scrollToTop() {
 }
 </script>
 <template>
-  <footer class="text-white border-t border-[#222028] px-3 pt-10 pb-8 sm:px-20">
+  <footer class="text-white border-t border-[#222028] px-3 md:h-12 pt-10 pb-8 sm:px-20">
     <div class="md:hidden">
       <router-link :to="{path :'/'}">
         <HotFlix />

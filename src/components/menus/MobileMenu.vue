@@ -51,10 +51,10 @@ function hiddenNavMenu() {
         </div>
         <div class="flex justify-between items-center w-1/2 sm:w-2/5">
           <SearchIcon @click="goTo" />
-          <div class="flex items-center hover:hover">
+          <!-- <div class="flex items-center hover:hover">
             <span class="mr-1">En</span>
             <caret-down-icon />
-          </div>
+          </div> -->
           <div>
             <router-link :to="{ path: '/signIn' }">
               <Sign-In />
