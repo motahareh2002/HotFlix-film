@@ -102,7 +102,6 @@ const name = UseName();
                 class="pb-3 cursor-pointer"
                 @click="
                   () => {
-                    x = 'NEW RELEASES';
                     isOpen = false;
                     show = true
                   }
