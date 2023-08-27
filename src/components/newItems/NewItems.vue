@@ -6,7 +6,7 @@ import ListIcon from "../icons/ListIcon.vue";
 import NewReleases from "./NewReleases.vue";
 import CloseIcon from "../icons/CloseIcon.vue";
 const isOpen: Ref<boolean> = ref(false);
-const x: Ref<string> = ref("RELEASES");
+const x: Ref<string> = ref("New RELEASES");
 const show: Ref<boolean> = ref(false);
 function subMenuOpen() {
   isOpen.value = !isOpen.value;
