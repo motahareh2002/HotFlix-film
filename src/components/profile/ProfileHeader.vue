@@ -97,7 +97,7 @@ const name = UseName();
             >
               PROFILE
             </li> -->
-          <router-link :to="{ path: 'profileTo' }">
+          <router-link :to="{ name: 'profileTo' }">
             <li
               class="pb-3 cursor-pointer"
               @click="
@@ -111,7 +111,7 @@ const name = UseName();
               PROFILE
             </li>
           </router-link>
-          <router-link :to="{ path: 'subscription' }">
+          <router-link :to="{ name: 'subscription' }">
             <li
               class="pb-3 cursor-pointer"
               @click="
@@ -125,7 +125,7 @@ const name = UseName();
               SUBSCRIPTION
             </li>
           </router-link>
-          <router-link :to="{ path: 'setting' }">
+          <router-link :to="{ name: 'setting' }">
             <li
               class="pb-3 cursor-pointer"
               @click="
