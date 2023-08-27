@@ -97,11 +97,12 @@ const name = UseName();
             >
               PROFILE
             </li> -->
-            <router-link :to="{ path: 'newRelease' }">
+            <router-link :to="{ path: 'profileTo' }">
               <li
                 class="pb-3 cursor-pointer"
                 @click="
                   () => {
+                    text = 'PROFILE';
                     isOpen = false;
                     show = true
                   }
