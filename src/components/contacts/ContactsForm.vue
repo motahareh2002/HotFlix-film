@@ -2,7 +2,7 @@
 
 
 <script setup lang="ts">
-import ButtonOrange from "@/components/btns/ButtonOrange.vue";
+import ButtonOrange from "../btns/buttonOrange.vue";
 </script>
 
 <template>

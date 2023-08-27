@@ -6,8 +6,6 @@
   </div>
 </template>
 
-<script>
-</script>
 
 <style scoped>
     .home{

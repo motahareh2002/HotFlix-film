@@ -1,12 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import ArrowRight from "../icons/ArrowRight.vue";
-import { defineProps } from 'vue'
 
-defineProps({
-  Name: {
-    type: String
-  }
-})
+const props = defineProps<{
+  Name ?: string
+}>();
 </script>
 <template>
   <section

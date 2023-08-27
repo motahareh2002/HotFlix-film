@@ -1,7 +1,6 @@
 
 <script setup lang="ts">
 import ButtonGreen from "../btns/ButtonGreen.vue";
-import type ButtonPriceVue from "../btns/ButtonPrice.vue";
 import buttonOrange from "../btns/buttonOrange.vue";
 interface client {
   id: number;
