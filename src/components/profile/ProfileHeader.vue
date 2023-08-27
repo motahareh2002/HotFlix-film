@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import type { Ref } from "vue";
-import {UseName} from '@/stores/Names'
+import { UseName } from "@/stores/Names";
 import ButtonOrange from "../btns/buttonOrange.vue";
 import SignOutIcon from "../icons/SignOutIcon.vue";
 import UserIcon from "../icons/UserIcon.vue";
@@ -18,7 +18,7 @@ function subMenuOpen() {
 function clickHandler() {
   show.value = true;
 }
-const name = UseName()
+const name = UseName();
 </script>
 
 
@@ -84,7 +84,7 @@ const name = UseName()
         v-if="isOpen"
       >
         <ul>
-          <router-link :to="{ path: 'profileTo' }">
+          <!-- <router-link :to="{ path: 'profileTo' }"> -->
             <!-- <li
               class="pb-3 cursor-pointer"
               @click="
