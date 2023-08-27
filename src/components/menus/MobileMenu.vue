@@ -3,7 +3,6 @@ import { ref, onMounted } from "vue";
 import type { Ref } from "vue";
 import HotFlix from "../icons/HotFlix.vue";
 import SearchIcon from "../icons/SearchIcon.vue";
-import CaretDownIcon from "../icons/caretDownIcon.vue";
 import SignIn from "../icons/SignIn.vue";
 import NavBar from "../icons/NavBar.vue";
 import SearchBox from "../searchComp/SearchBox.vue";
@@ -51,10 +50,6 @@ function hiddenNavMenu() {
         </div>
         <div class="flex justify-between items-center w-1/2 sm:w-2/5">
           <SearchIcon @click="goTo" />
-          <!-- <div class="flex items-center hover:hover">
-            <span class="mr-1">En</span>
-            <caret-down-icon />
-          </div> -->
           <div>
             <router-link :to="{ path: '/signIn' }">
               <Sign-In />

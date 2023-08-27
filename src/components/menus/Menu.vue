@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import HotFlix from "../icons/HotFlix.vue";
-import CaretDownIcon from "../icons/caretDownIcon.vue";
 import SignIn from "../icons/SignIn.vue";
 import SearchInput from "../searchComp/SearchInput.vue";
 import MoreMenu from "./MoreMenu.vue";
@@ -56,10 +55,6 @@ function x(){
         </ul>
         <div class="flex justify-end items-center w-3/6">
           <SearchInput class="text-sm mr-10" />
-          <!-- <div class="flex items-center hover:hover">
-            <span class="mr-1">En</span>
-            <caret-down-icon />
-          </div> -->
           <div>
             <router-link :to="{ path: '/signIn' }">
               <Sign-In />
