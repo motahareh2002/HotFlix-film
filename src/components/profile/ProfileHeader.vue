@@ -84,8 +84,8 @@ const name = UseName()
         v-if="isOpen"
       >
         <ul>
-          <router-link :to="{ path: '/profileTo' }">
-            <li
+          <router-link :to="{ path: 'profileTo' }">
+            <!-- <li
               class="pb-3 cursor-pointer"
               @click="
                 () => {
@@ -96,9 +96,22 @@ const name = UseName()
               "
             >
               PROFILE
-            </li>
+            </li> -->
+            <router-link :to="{ path: 'newRelease' }">
+              <li
+                class="pb-3 cursor-pointer"
+                @click="
+                  () => {
+                    x = 'NEW RELEASES';
+                    isOpen = false;
+                    show = true
+                  }
+                "
+              >
+                NEW RELEASES
+              </li>
           </router-link>
-          <router-link :to="{ path: '/subscription' }">
+          <router-link :to="{ path: 'subscription' }">
             <li
               class="pb-3 cursor-pointer"
               @click="
@@ -112,7 +125,7 @@ const name = UseName()
               SUBSCRIPTION
             </li>
           </router-link>
-          <router-link :to="{ path: '/setting' }">
+          <router-link :to="{ path: 'setting' }">
             <li
               class="pb-3 cursor-pointer"
               @click="
