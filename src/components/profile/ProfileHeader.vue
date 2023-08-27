@@ -31,7 +31,7 @@ const name = UseName();
             <UserIcon />
           </div>
           <div class="text-sm">
-            <h1>{{name.firstName}} {{name.lastName}}</h1>
+            <h1>{{ name.firstName }} {{ name.lastName }}</h1>
             <span class="text-[rgba(255,255,255,0.7)] text-xs"
               >HOTFLIX ID : 15763</span
             >
@@ -41,7 +41,7 @@ const name = UseName();
               <button @click="clickHandler">
                 <li
                   class="mr-5 text-center w-24 pb-2 hover:hover cursor-pointer"
-                  :class="{'active' : !show}"
+                  :class="{ active: !show }"
                 >
                   PROFILE
                 </li>
@@ -85,7 +85,7 @@ const name = UseName();
       >
         <ul>
           <!-- <router-link :to="{ path: 'profileTo' }"> -->
-            <!-- <li
+          <!-- <li
               class="pb-3 cursor-pointer"
               @click="
                 () => {
@@ -97,19 +97,19 @@ const name = UseName();
             >
               PROFILE
             </li> -->
-            <router-link :to="{ path: 'profileTo' }">
-              <li
-                class="pb-3 cursor-pointer"
-                @click="
-                  () => {
-                    text = 'PROFILE';
-                    isOpen = false;
-                    show = true
-                  }
-                "
-              >
-                NEW RELEASES
-              </li>
+          <router-link :to="{ path: 'profileTo' }">
+            <li
+              class="pb-3 cursor-pointer"
+              @click="
+                () => {
+                  text = 'PROFILE';
+                  isOpen = false;
+                  show = true;
+                }
+              "
+            >
+              PROFILE
+            </li>
           </router-link>
           <router-link :to="{ path: 'subscription' }">
             <li
