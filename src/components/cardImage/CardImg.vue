@@ -1,7 +1,6 @@
 
 <script setup lang="ts">
 import ButtonPlay from "../btns/ButtonPlay.vue";
-import VLazyImage from "v-lazy-image";
 const props = defineProps<{
   id: number;
   details?: string;
@@ -17,7 +16,7 @@ const props = defineProps<{
   <div>
     <div class="rounded-lg relative m-2">
       <div class="w-[100%] relative group">
-        <v-lazy-image
+        <img
           :src="`${img}`"
           class="rounded-lg brightness-75 group-hover:brightness-90 transition-all duration-300 w-[300px] h-[250px] sm:h-[230px] md:h-[200px] md:w-[400px] lg:h-[300px] lg:w-[250px]"
         />
