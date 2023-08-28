@@ -43,26 +43,26 @@ function hiddenNavMenu() {
         v-if="!isOpen"
         class="text-[#FFFFFF] flex justify-between items-center py-5 px-4 sm:px-24"
       >
-        <div class="w-1/2">
-          <router-link :to="{path: '/'}">
-            <HotFlix class="w-24 sm:w-28" />
-          </router-link>
-        </div>
-        <div class="flex justify-between items-center w-1/2 sm:w-2/5">
-          <SearchIcon @click="goTo" />
+        <div class="flex justify-start items-center w-1/2 sm:w-2/5">
+          <div>
+            <Nav-Bar @click="showNavMenu" v-if="menuNav" />
+            <CloseIcon
+            @click="hiddenNavMenu"
+            v-if="!menuNav"
+            class="h-7 mt-1 text-primary"
+            />
+          </div>
+          <SearchIcon @click="goTo"  class="mx-10"/>  
           <div>
             <router-link :to="{ path: '/signIn' }">
               <Sign-In />
             </router-link>
           </div>
-          <div>
-            <Nav-Bar @click="showNavMenu" v-if="menuNav" />
-            <CloseIcon
-              @click="hiddenNavMenu"
-              v-if="!menuNav"
-              class="h-7 mt-1 text-primary"
-            />
-          </div>
+        </div>
+        <div class="">
+          <router-link :to="{ path: '/' }">
+            <HotFlix class="w-24 sm:w-28" />
+          </router-link>
         </div>
       </div>
       <div v-else>
