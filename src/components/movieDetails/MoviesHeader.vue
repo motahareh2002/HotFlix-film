@@ -519,7 +519,7 @@ onMounted(() => {
         <div class="flex justify-center lg:w-[30%]">
           <img
             :src="src"
-            class="rounded-lg brightness-90 w-full hover:brightness-100 md:w-[50%] lg:w-[75%]"
+            class="rounded-lg brightness-90 w-[70%] hover:brightness-100 md:w-[50%] lg:w-[75%]"
           />
         </div>
 
