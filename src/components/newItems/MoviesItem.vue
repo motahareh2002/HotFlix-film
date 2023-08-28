@@ -107,7 +107,7 @@ const newRelease: release[] = [
       :details="newR.detail"
       :category="newR.category"
       :borderColor="
-        newR.rate > 7.5 ? 'green' : newR.rate > 5.6 ? 'yellow' : 'red'"
+        newR.rate > 7 ? 'green' : newR.rate > 5.6 ? 'yellow' : 'red'"
         class="mb-4"
     />
   </div>

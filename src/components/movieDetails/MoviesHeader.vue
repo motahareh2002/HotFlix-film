@@ -494,7 +494,7 @@ onMounted(() => {
     detail.value = movies[index].detail;
     category.value = movies[index].category;
     borderColor.value =
-      movies[index].rate > 7.5
+      movies[index].rate > 7
         ? "green"
         : movies[index].rate > 5.6
         ? "yellow"
@@ -529,15 +529,9 @@ onMounted(() => {
               {{ detail }} ({{ releaseYear }})
             </h1>
             <div class="flex items-center justify-center rounded-lg py-2">
-              <div
-                id="rate"
-                class="w-[40px] rounded-full border-4 text-white p-1 mr-4"
-                :style="{
-                  backgroundColor: 'rgba(26,25,31,0.6)',
-                  borderColor: borderColor,
-                }"
-              >
-                <span>{{ rate }}</span>
+              <div id="rate" class="mr-2 text-primary">
+                <span class="">{{ rate }}</span>
+                <fa icon="star" class="text-xs" />
               </div>
               <span class="text-lg">User Score</span>
             </div>

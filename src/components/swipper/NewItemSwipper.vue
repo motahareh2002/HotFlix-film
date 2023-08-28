@@ -184,7 +184,7 @@ function prevITem() {
             :details="sliderImage.detail"
             :category="sliderImage.category"
             :borderColor="
-              sliderImage.rate > 7.5
+              sliderImage.rate > 7
                 ? 'green'
                 : sliderImage.rate > 5.6
                 ? 'yellow'
