@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "pinia": "^2.1.4",
     "swiper": "^10.1.0",
+    "v-lazy-image": "^2.1.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
