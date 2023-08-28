@@ -136,11 +136,11 @@ function prevITem() {
     :style="{ background: `rgba(0,0,0,0.7) url(${backgroundImg})` }"
   >
     <div class="flex justify-between mb-10 pl-4 pr-6">
-      <div class="text-2xl sm:text-4xl leading-relaxed">
+      <div class="text-xl sm:text-4xl leading-relaxed">
         <span class="font-black">NEW ITEMS </span>
         <span class="">OF THIS SEASON</span>
       </div>
-      <div class="flex justify-between text-xl opacity-90">
+      <div class="md:flex justify-between text-xl opacity-90 hidden">
         <ArrowLeft class="mr-5 prev" @click="prevITem" />
         <ArrowRight class="next" @click="nextItem" />
       </div>

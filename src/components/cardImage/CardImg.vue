@@ -1,6 +1,7 @@
 
 <script setup lang="ts">
 import ButtonPlay from "../btns/ButtonPlay.vue";
+import buttonOrange from "../btns/buttonOrange.vue";
 const props = defineProps<{
   id: number;
   details?: string;
@@ -11,7 +12,6 @@ const props = defineProps<{
 }>();
 </script>
 
-<!--  -->
 <template>
   <div>
     <div class="rounded-lg relative m-2">
@@ -35,23 +35,16 @@ const props = defineProps<{
         <span>{{ rate }}</span>
       </div>
     </div>
-    <div id="details" class="text-[#FFFFFF] hover:hover ml-3 text-lg">
+    <div id="details" class="md:text-[#FFFFFF] hover:hover ml-3 flex justify-center text-sm  md:text-lg text-primary ">
       <h1>{{ details }}</h1>
     </div>
-    <div id="category" class="text-primary ml-3 text-xs">
+    <div id="category" class="text-primary ml-3 text-xs hidden md:block">
       <h3>{{ category }}</h3>
     </div>
+    <RouterLink :to="`/${id}`" class="flex justify-center md:hidden">
+      <buttonOrange class="text-white w-11/12 my-2 py-1 text-sm">
+        Watch Now
+      </buttonOrange>
+    </RouterLink>
   </div>
 </template>
-
-
-<style scoped>
-.v-lazy-image {
-  filter: blur(20px);
-  transition: filter 0.7s;
-}
-
-.v-lazy-image-loaded {
-  filter: blur(0);
-}
-</style>
