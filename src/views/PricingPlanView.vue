@@ -14,7 +14,7 @@ let name: Ref<string> = ref("Pricing plan");
   <div>
     <HeaderView />
     <SectionTop :Name="name" />
-    <PricePlace  class="mt-20"/>
+    <PricePlace  class="mt-20  sm:px-16"/>
     <our-features />
     <OurPartners />
     <FooterPage />

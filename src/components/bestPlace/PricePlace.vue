@@ -92,7 +92,7 @@ const buttons: button[] = [
 </script>
 
 <template>
-  <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 px-1 sm:px-20">
+  <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 px-1">
     <div
       v-for="button in buttons"
       :key="button.id"

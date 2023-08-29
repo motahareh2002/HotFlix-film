@@ -19,7 +19,7 @@ function clickHandler() {
 
 
 <template>
-  <div class="w-full px-3 sm:px-20">
+  <div class="w-full px-3 sm:px-20  border-b border-[#222028]">
     <div class="text-[#FFFFFF] py-5 md:pb-3 border-b border-[#222028]">
       <h1 class="text-3xl pb-2">New Items</h1>
       <button class="text-xs md:hidden" @click="subMenuOpen">

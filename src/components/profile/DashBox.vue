@@ -49,7 +49,7 @@ function goToCatalog(){
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-5">
     <div
-      class="bg-[#222028] rounded-lg text-[#FFFFFF] overflow-y-auto scrollbar-hide"
+      class="bg-[#222028] rounded-lg text-[#FFFFFF]"
     >
       <div class="flex justify-between px-6 py-5">
         <div class="text-xl">
@@ -60,7 +60,7 @@ function goToCatalog(){
           View All
         </button>
       </div>
-      <div class="-mr-32 overflow-y-auto scrollbar-hide md:overflow-hidden lg:mr-0">
+      <div class="mt-3 overflow-y-auto scrollbar-hide">
         <div
           class="mt-5 py-3 px-6 grid grid-cols-4 text-xs text-[rgba(255,255,255,0.6)] border-t border-b border-[#1a191f]"
         >
@@ -68,7 +68,7 @@ function goToCatalog(){
           <span>CATEGORY</span>
           <span>RATING</span>
         </div>
-        <div class="">
+        <div class="-mr-32 overflow-y-auto scrollbar-hide md:overflow-hidden lg:mr-0">
           <div
             class="grid grid-cols-4 my-3 px-6 text-sm"
             v-for="movie in movies"

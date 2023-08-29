@@ -128,6 +128,10 @@ function prevITem() {
   nextTo.value = index.value--;
   backgroundImg.value = backImg[nextTo.value].src;
 }
+
+setInterval(()=>{
+  nextItem()
+},3500)
 </script>
 
 <template>

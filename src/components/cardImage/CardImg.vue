@@ -19,7 +19,7 @@ const props = defineProps<{
         <img
           :src="`${img}`"
           class="rounded-lg  group-hover:brightness-75 transition-all duration-300 
-                  w-[300px] h-[240px] sm:h-[230px] md:h-[180px] md:w-[200px] lg:w-[200px] lg:h-[280px]"
+                  w-[300px] h-[240px] sm:h-[230px] md:h-[180px] md:w-[200px] lg:w-[230px] lg:h-[290px]"
         />
         <router-link :to="`/${id}`">
           <ButtonPlay class="group-hover:visible hidden md:block" />

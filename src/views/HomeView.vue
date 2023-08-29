@@ -14,7 +14,7 @@ import HeaderView from '@/components/header/HeaderView.vue'
     <new-items />
     <ExpectedPremiere />
     <best-place />
-    <price-place />
+    <price-place class=" sm:px-16" />
     <FooterPage />
   </div>
 </template>
