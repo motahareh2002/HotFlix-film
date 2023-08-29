@@ -166,7 +166,15 @@ setInterval(()=>{
             spaceBetween: 5,
           },
           '768': {
-            slidesPerView: 5,
+            slidesPerView: 4,
+            spaceBetween: 5,
+          },
+          '1000': {
+            slidesPerView: 6,
+            spaceBetween: 5,
+          },
+          '1180': {
+            slidesPerView: 7,
             spaceBetween: 5,
           },
         }"

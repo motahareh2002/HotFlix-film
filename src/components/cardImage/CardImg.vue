@@ -18,11 +18,11 @@ const props = defineProps<{
       <div class="w-[100%] relative group">
         <img
           :src="`${img}`"
-          class="rounded-lg  group-hover:brightness-75 transition-all duration-300 
-                  w-[300px] h-[240px] sm:h-[230px] md:h-[180px] md:w-[200px] lg:w-[230px] lg:h-[290px]"
+          class="rounded-lg  group-hover:brightness-50 transition-all duration-300 
+                  w-[300px] h-[240px] sm:h-[230px] md:h-[200px] md:w-[300px] lg:w-[230px] lg:h-[260px] xl:h-[280px]"
         />
         <router-link :to="`/${id}`">
-          <ButtonPlay class="group-hover:visible hidden md:block" />
+          <ButtonPlay class="group-hover:visible group-hover:scale-125 hidden md:block" />
         </router-link>
       </div>
       <div
