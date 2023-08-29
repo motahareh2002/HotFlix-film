@@ -44,7 +44,7 @@ function hiddenNavMenu() {
         class="text-[#FFFFFF] flex justify-between items-center py-5 px-4 sm:px-24"
       >
         <div class="flex justify-start items-center w-1/2 sm:w-2/5">
-          <div>
+          <div class="bg-[#222028] px-2 rounded-md">
             <Nav-Bar @click="showNavMenu" v-if="menuNav" />
             <CloseIcon
             @click="hiddenNavMenu"
@@ -52,7 +52,7 @@ function hiddenNavMenu() {
             class="h-7 mt-1 text-primary"
             />
           </div>
-          <SearchIcon @click="goTo"  class="mx-10"/>  
+          <SearchIcon @click="goTo"  class="mx-5 bg-[#222028] px-3 py-1.5 rounded-md"/>  
           <div>
             <router-link :to="{ path: '/signIn' }">
               <Sign-In />

@@ -30,27 +30,30 @@ function clickHandler() {
       <ul class="md:flex text-xs mt-2 hidden">
         <router-link active-class="active" :to="{ path: 'newRelease' }">
           <button @click="clickHandler">
-            <li class="mr-5 text-center w-24 hover:hover cursor-pointer pb-3" :class="{'active' :!show }">
+            <li
+              class="mr-5 text-center w-24 hover:hover cursor-pointer pb-3"
+              :class="{ active: !show }"
+            >
               NEW RELEASES
             </li>
           </button>
         </router-link>
         <router-link active-class="active" :to="{ path: 'movie' }">
-          <button  @click="clickHandler">
+          <button @click="clickHandler">
             <li class="mr-5 text-center w-24 hover:hover cursor-pointer">
               MOVIES
             </li>
           </button>
         </router-link>
         <router-link active-class="active" :to="{ path: 'tvSeries' }">
-          <button  @click="clickHandler">
+          <button @click="clickHandler">
             <li class="mr-5 text-center w-24 hover:hover cursor-pointer">
               TV SERIES
             </li>
           </button>
         </router-link>
         <router-link active-class="active" :to="{ path: 'carton' }">
-          <button  @click="clickHandler">
+          <button @click="clickHandler">
             <li class="mr-5 text-center w-24 hover:hover cursor-pointer">
               CARTOONS
             </li>
@@ -60,7 +63,7 @@ function clickHandler() {
     </div>
     <div class="relative">
       <div
-        class="bg-[#222028] rounded-lg text-[#FFFFFF] text-xs w-[220px] px-4 py-5 -mt-3 z-50 md:hidden"
+        class="bg-[#222028] rounded-lg text-[#FFFFFF] absolute -top-5 text-xs w-[220px] px-4 py-5 -mt-3 z-50 md:hidden"
         v-if="isOpen"
       >
         <ul>
@@ -71,7 +74,7 @@ function clickHandler() {
                 () => {
                   x = 'NEW RELEASES';
                   isOpen = false;
-                  show = true
+                  show = true;
                 }
               "
             >
@@ -85,7 +88,7 @@ function clickHandler() {
                 () => {
                   x = 'MOVIES';
                   isOpen = false;
-                  show = true
+                  show = true;
                 }
               "
             >
@@ -99,7 +102,7 @@ function clickHandler() {
                 () => {
                   x = 'TV SERIES';
                   isOpen = false;
-                  show = true
+                  show = true;
                 }
               "
             >
@@ -113,7 +116,7 @@ function clickHandler() {
                 () => {
                   x = 'CARTOONS';
                   isOpen = false;
-                  show = true
+                  show = true;
                 }
               "
             >

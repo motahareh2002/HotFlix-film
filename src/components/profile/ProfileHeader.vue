@@ -84,19 +84,6 @@ const name = UseName();
         v-if="isOpen"
       >
         <ul>
-          <!-- <router-link :to="{ path: 'profileTo' }"> -->
-          <!-- <li
-              class="pb-3 cursor-pointer"
-              @click="
-                () => {
-                  text = 'PROFILE';
-                  isOpen = false;
-                  show = true;
-                }
-              "
-            >
-              PROFILE
-            </li> -->
           <router-link :to="{ name: 'profileTo' }">
             <li
               class="pb-3 cursor-pointer"

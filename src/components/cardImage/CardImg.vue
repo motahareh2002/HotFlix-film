@@ -19,7 +19,7 @@ const props = defineProps<{
         <img
           :src="`${img}`"
           class="rounded-lg  group-hover:brightness-75 transition-all duration-300 
-                  w-[300px] h-[250px] sm:h-[230px] md:h-[180px] md:w-[200px] lg:w-[220px] lg:h-[265px]"
+                  w-[300px] h-[240px] sm:h-[230px] md:h-[180px] md:w-[200px] lg:w-[200px] lg:h-[280px]"
         />
         <router-link :to="`/${id}`">
           <ButtonPlay class="group-hover:visible hidden md:block" />
@@ -36,7 +36,7 @@ const props = defineProps<{
         <span>{{ rate }}</span>
       </div>
     </div>
-    <div id="details" class="md:text-[#FFFFFF] hover:hover ml-3 flex justify-center md:justify-start text-sm  md:text-lg text-primary ">
+    <div id="details" class="md:text-[#FFFFFF] hover:hover ml-3 text-sm  md:text-lg text-primary ">
       <h1>{{ details }}</h1>
     </div>
     <div id="category" class="text-primary ml-3 text-xs hidden md:block">

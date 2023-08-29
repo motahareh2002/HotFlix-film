@@ -132,7 +132,7 @@ function prevITem() {
 
 <template>
   <div
-    class="text-white bg-blend-darken px-2 sm:px-20 pt-14 pb-8"
+    class="text-white bg-blend-darken px-3 sm:px-20 pt-14 pb-8"
     :style="{ background: `rgba(0,0,0,0.7) url(${backgroundImg})` }"
   >
     <div class="flex justify-between mb-10 pl-4 pr-6">
