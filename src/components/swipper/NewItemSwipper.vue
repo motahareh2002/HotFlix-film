@@ -22,10 +22,10 @@ interface slider {
   category: string;
 }
 const backImg: backImage[] = [
-  { id: 1, src: "http://hotflix.volkovdesign.com/main/img/home/home__bg.jpg" },
-  { id: 2, src: "http://hotflix.volkovdesign.com/main/img/home/home__bg2.jpg" },
-  { id: 3, src: "http://hotflix.volkovdesign.com/main/img/home/home__bg3.jpg" },
-  { id: 5, src: "http://hotflix.volkovdesign.com/main/img/home/home__bg5.jpg" },
+  { id: 1, src: "https://wallpapercave.com/wp/wp12466836.jpg" },
+  { id: 2, src: "https://wallpapercave.com/wp/wp1915193.png" },
+  { id: 3, src: "https://4kwallpapers.com/images/walls/thumbs_3t/11822.jpg" },
+  { id: 4, src: "https://wallpapercave.com/wp/wp10758144.jpg" },
 ];
 const sliderImages: slider[] = [
   {
@@ -116,7 +116,7 @@ const sliderImages: slider[] = [
 const index: Ref<number> = ref(0);
 const nextTo: Ref<number> = ref(0);
 const backgroundImg: Ref<string> = ref(
-  "http://hotflix.volkovdesign.com/main/img/home/home__bg.jpg"
+  "https://wallpapercave.com/wp/wp1890591.jpg"
 );
 function nextItem() {
   if (index.value === backImg.length) index.value = 0;
@@ -133,10 +133,9 @@ setInterval(()=>{
   nextItem()
 },3500)
 </script>
-
 <template>
   <div
-    class="text-white bg-blend-darken px-3 sm:px-20 pt-14 pb-8"
+    class="text-white bg-blend-darken px-3 sm:px-20 pt-14 relative pb-8 "
     :style="{ background: `rgba(0,0,0,0.7) url(${backgroundImg})` }"
   >
     <div class="flex justify-between mb-10 pl-4 pr-6">
@@ -144,10 +143,7 @@ setInterval(()=>{
         <span class="font-black">NEW ITEMS </span>
         <span class="">OF THIS SEASON</span>
       </div>
-      <div class="md:flex justify-between text-xl opacity-90 hidden">
-        <ArrowLeft class="mr-5 prev" @click="prevITem" />
-        <ArrowRight class="next" @click="nextItem" />
-      </div>
+      
     </div>
     <div>
       <Swiper
@@ -205,6 +201,10 @@ setInterval(()=>{
           />
         </SwiperSlide>
       </Swiper>
+      <div class="md:flex justify-center mt-5 text-xl opacity-90 hidden">
+        <ArrowLeft class="mr-5 prev rounded-full border px-3 py-1.5 hover:bg-white hover:text-black  transition-colors ease-in-out duration-700" @click="prevITem" />
+        <ArrowRight class="next rounded-full border px-3 py-1.5 hover:bg-white hover:text-black  transition-colors ease-in-out duration-700" @click="nextItem" />
+      </div>
     </div>
   </div>
 </template>

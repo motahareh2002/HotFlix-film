@@ -49,8 +49,8 @@ function x(){
               <li>PRICING PLAN</li>
             </button>
           </router-link>
-          <button class="-mt-2 hover:hover" @click="showMenu">
-            <li class="font-bold text-xl">...</li>
+          <button class="hover:hover" @click="showMenu">
+            <li class="">SEE ALL</li>
           </button>
         </ul>
         <div class="flex justify-end items-center w-3/6">

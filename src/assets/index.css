@@ -11,7 +11,7 @@
     @apply border-2 border-[#29b474] rounded-md hover:bg-[rgba(41,180,116,0.05)]
   }
   .hover {
-    @apply text-[#f9ab00] transition-colors duration-300
+    @apply text-[#f9ab00]   transition-colors ease-in-out duration-700
   }
 
   .form-input {

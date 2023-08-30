@@ -32,7 +32,7 @@ function showMoreMenu() {
         </button>
       </router-link>
       <button class="hover:hover py-2" @click="showMoreMenu">
-        <li class="font-bold text-xl">...</li>
+        <li class="text-sm">see All</li>
       </button>
     </ul>
     <MoreMenu v-if="showMenu" class="text-xs w-[60%] h-[170px] ml-5" />
