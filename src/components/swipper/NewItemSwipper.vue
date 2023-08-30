@@ -2,116 +2,25 @@
 import ArrowLeft from "../icons/ArrowLeft.vue";
 import ArrowRight from "../icons/ArrowRight.vue";
 import CardImg from "../cardImage/CardImg.vue";
+import NewItemMdSize from './NewItemMdSize.vue';
+import NewItemUnderMd from './NewItemUnderMd.vue';
 import { ref } from "vue";
 import type { Ref } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 interface backImage {
   id: number;
   src: string;
 }
-interface slider {
-  id: number;
-  src: string;
-  rate: number;
-  detail: string;
-  category: string;
-}
 const backImg: backImage[] = [
-  { id: 1, src: "https://wallpapercave.com/wp/wp12466836.jpg" },
-  { id: 2, src: "https://wallpapercave.com/wp/wp1915193.png" },
+  {
+    id: 1,
+    src: "https://images5.fanpop.com/image/photos/30700000/FF-background-barbie-movies-30763500-990-660.jpg",
+  },
+  {
+    id: 2,
+    src: "https://getwallpapers.com/wallpaper/full/d/6/e/1017834-cool-friends-tv-show-wallpapers-1920x1080-for-macbook.jpg",
+  },
   { id: 3, src: "https://4kwallpapers.com/images/walls/thumbs_3t/11822.jpg" },
   { id: 4, src: "https://wallpapercave.com/wp/wp10758144.jpg" },
-];
-const sliderImages: slider[] = [
-  {
-    id: 34,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
-    detail: "Friends",
-    category: "Comedy, Drama",
-    rate: 2.8,
-  },
-  {
-    id: 35,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/daSFbrt8QCXV2hSwB0hqYjbj681.jpg",
-    detail: "Grey's Anatomy",
-    category: "Drama",
-    rate: 5.5,
-  },
-  {
-    id: 36,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/oGE7FI29ihpWlO4TAC7bJiswW4H.jpg",
-    detail: "Beverly Hillbillies ",
-    category: "Comedy",
-    rate: 6.6,
-  },
-  {
-    id: 37,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
-    detail: "Peaky Blinders",
-    category: "Drama, Crime",
-    rate: 5.6,
-  },
-  {
-    id: 38,
-    src: "	https://www.themoviedb.org/t/p/w220_and_h330_face/r935SMphvXppx5bJjbIBNx02fwc.jpg",
-    detail: "The Blacklist",
-    category: "Crime, Mystery",
-    rate: 9.2,
-  },
-  {
-    id: 10,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/vB8o2p4ETnrfiWEgVxHmHWP9yRl.jpg",
-    detail: "Heart of Stone",
-    category: "Thriller, Action",
-    rate: 5.6,
-  },
-  {
-    id: 11,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/3O8uTUpt76ShtEtNNrOJpcwQROH.jpg",
-    detail: "Mask Girl",
-    category: "Comedy, Drama",
-    rate: 9.2,
-  },
-  {
-    id: 12,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/4K7gQjD19CDEPd7A9KZwr2D9Nco.jpg",
-    detail: "No Hard Feelings",
-    category: "Comedy, Romance",
-    rate: 5.6,
-  },
-  {
-    id: 13,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/fYx5q9hPAmbDrWzsYUDhxZJnigC.jpg",
-    detail: "The Winter King",
-    category: "Drama",
-    rate: 4.9,
-  },
-  {
-    id: 14,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/q17tXNROOslj7uCGicKNlIf9Rx6.jpg",
-    detail: "The Castle Quest",
-    category: "Animation",
-    rate: 7.2,
-  },
-  {
-    id: 15,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
-    detail: "One Piece",
-    category: "Action & Adventure",
-    rate: 5.9,
-  },
-  {
-    id: 16,
-    src: "https://www.themoviedb.org/t/p/w220_and_h330_face/kgrLpJcLBbyhWIkK7fx1fM4iSvf.jpg",
-    detail: "Ruby Gillman,",
-    category: "Animation, Family",
-    rate: 2.5,
-  },
 ];
 const index: Ref<number> = ref(0);
 const nextTo: Ref<number> = ref(0);
@@ -143,67 +52,23 @@ setInterval(()=>{
         <span class="font-black">NEW ITEMS </span>
         <span class="">OF THIS SEASON</span>
       </div>
-      
     </div>
     <div>
-      <Swiper
-        :rewind="true"
-        :modules="[Navigation]"
-        :pagination="{
-          clickable: true,
-        }"
-        :breakpoints="{
-          '100': {
-            slidesPerView: 2,
-            spaceBetween: 1,
-          },
-          '640': {
-            slidesPerView: 3,
-            spaceBetween: 5,
-          },
-          '768': {
-            slidesPerView: 4,
-            spaceBetween: 5,
-          },
-          '1000': {
-            slidesPerView: 6,
-            spaceBetween: 5,
-          },
-          '1180': {
-            slidesPerView: 7,
-            spaceBetween: 5,
-          },
-        }"
-        :navigation="{
-          nextEl: '.next',
-          prevEl: '.prev',
-        }"
-        class="mySwiper"
-      >
-        <SwiperSlide
-          v-for="sliderImage in sliderImages"
-          :key="sliderImage.id"
-          class=""
-        >
-          <CardImg
-            :img="sliderImage.src"
-            :id="sliderImage.id"
-            :rate="sliderImage.rate"
-            :details="sliderImage.detail"
-            :category="sliderImage.category"
-            :borderColor="
-              sliderImage.rate > 7
-                ? 'green'
-                : sliderImage.rate > 5.6
-                ? 'yellow'
-                : 'red'
-            "
-          />
-        </SwiperSlide>
-      </Swiper>
+      <div class="sm:hidden">
+        <NewItemUnderMd />
+      </div>
+      <div class="hidden sm:block">
+        <new-item-md-size />
+      </div>
       <div class="md:flex justify-center mt-5 text-xl opacity-90 hidden">
-        <ArrowLeft class="mr-5 prev rounded-full border px-3 py-1.5 hover:bg-white hover:text-black  transition-colors ease-in-out duration-700" @click="prevITem" />
-        <ArrowRight class="next rounded-full border px-3 py-1.5 hover:bg-white hover:text-black  transition-colors ease-in-out duration-700" @click="nextItem" />
+        <ArrowLeft
+          class="mr-5 prev rounded-full border px-3 py-1.5 hover:bg-white hover:text-black transition-colors ease-in-out duration-700"
+          @click="prevITem"
+        />
+        <ArrowRight
+          class="next rounded-full border px-3 py-1.5 hover:bg-white hover:text-black transition-colors ease-in-out duration-700"
+          @click="nextItem"
+        />
       </div>
     </div>
   </div>
