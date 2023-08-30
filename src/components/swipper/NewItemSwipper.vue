@@ -131,12 +131,12 @@ function prevITem() {
 
 setInterval(()=>{
   nextItem()
-},3500)
+},4000)
 </script>
 <template>
   <div
-    class="text-white bg-blend-darken px-3 sm:px-20 pt-14 relative pb-8 "
-    :style="{ background: `rgba(0,0,0,0.7) url(${backgroundImg})` }"
+    class="text-white bg-blend-darken px-3 sm:px-20 pt-14 relative pb-8"
+    :style="{ background: `rgba(0,0,0,0.7) url(${backgroundImg}) 100%` }"
   >
     <div class="flex justify-between mb-10 pl-4 pr-6">
       <div class="text-xl sm:text-4xl leading-relaxed">
